@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccxui30cwk2ah"]
+
+[ext_resource type="Script" path="res://scenes/prototypes/main_view/main_view.gd" id="1_osr3e"]
+[ext_resource type="Texture2D" uid="uid://bq3jr2f7oit5w" path="res://assets/mightyena.png" id="2_rdt5c"]
+
+[node name="MainView" type="VBoxContainer" node_paths=PackedStringArray("progress_bar")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_osr3e")
+progress_bar = NodePath("BottomBorder/MarginContainer/ProgressBar")
+
+[node name="TopBorder" type="Control" parent="."]
+custom_minimum_size = Vector2(640, 80)
+layout_mode = 2
+
+[node name="ReferenceRect" type="ReferenceRect" parent="TopBorder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TopBorder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"HeaderLarge"
+text = "Pokémon"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CentralPart" type="Control" parent="."]
+custom_minimum_size = Vector2(640, 320)
+layout_mode = 2
+
+[node name="ReferenceRect" type="ReferenceRect" parent="CentralPart"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CentralPart"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rdt5c")
+expand_mode = 4
+
+[node name="TextureButton" type="TextureButton" parent="CentralPart"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BottomBorder" type="Control" parent="."]
+custom_minimum_size = Vector2(640, 80)
+layout_mode = 2
+
+[node name="ReferenceRect" type="ReferenceRect" parent="BottomBorder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomBorder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 24
+
+[node name="ProgressBar" type="ProgressBar" parent="BottomBorder/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 10.0
+show_percentage = false
+
+[connection signal="pressed" from="CentralPart/TextureButton" to="." method="_on_texture_button_pressed"]
