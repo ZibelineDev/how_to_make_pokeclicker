@@ -51,6 +51,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="CentralPart"]
+texture_filter = 1
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 1
 anchors_preset = 8
