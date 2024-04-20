@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccxui30cwk2ah"]
+[gd_scene load_steps=4 format=3 uid="uid://ccxui30cwk2ah"]
 
 [ext_resource type="Script" path="res://scenes/prototypes/main_view/main_view.gd" id="1_osr3e"]
 [ext_resource type="Texture2D" uid="uid://bq3jr2f7oit5w" path="res://assets/mightyena.png" id="2_rdt5c"]
+[ext_resource type="Texture2D" uid="uid://cjja0t5kslhlg" path="res://assets/bulbasaur.png" id="3_3dqf1"]
 
 [node name="MainView" type="VBoxContainer" node_paths=PackedStringArray("progress_bar")]
 anchors_preset = 8
@@ -12,6 +13,8 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_osr3e")
+pokemon_00 = ExtResource("2_rdt5c")
+pokemon_01 = ExtResource("3_3dqf1")
 progress_bar = NodePath("BottomBorder/MarginContainer/ProgressBar")
 
 [node name="TopBorder" type="Control" parent="."]
@@ -51,6 +54,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="CentralPart"]
+unique_name_in_owner = true
 texture_filter = 1
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 1
@@ -75,6 +79,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CentralPart"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Pokedollar" type="Label" parent="CentralPart/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Pokédollar : <no_value>"
+
+[node name="Attack" type="Label" parent="CentralPart/VBoxContainer"]
+layout_mode = 2
+text = "Attack : 1"
+
+[node name="ClickAttack" type="Label" parent="CentralPart/VBoxContainer"]
+layout_mode = 2
+text = "Click Attack : 1"
 
 [node name="BottomBorder" type="Control" parent="."]
 custom_minimum_size = Vector2(640, 80)
@@ -106,4 +128,33 @@ size_flags_vertical = 1
 max_value = 10.0
 show_percentage = false
 
+[node name="HBoxContainer" type="HBoxContainer" parent="BottomBorder/MarginContainer/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftHp" type="Label" parent="BottomBorder/MarginContainer/ProgressBar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "12"
+horizontal_alignment = 2
+
+[node name="MiddleHp" type="Label" parent="BottomBorder/MarginContainer/ProgressBar/HBoxContainer"]
+layout_mode = 2
+text = "/"
+
+[node name="RightHp" type="Label" parent="BottomBorder/MarginContainer/ProgressBar/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "12"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="pressed" from="CentralPart/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
