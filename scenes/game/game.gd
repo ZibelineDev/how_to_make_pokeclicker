@@ -17,6 +17,9 @@ func _singleton_check() -> void:
 ## Packed scene containing UserInterface.
 @export
 var packed_user_interface : PackedScene
+## Packed Pokemon Database.
+@export
+var packed_db_pokemons : PackedScene
 ## Data of the game.
 var data : Data
 
@@ -29,5 +32,13 @@ func _enter_tree() -> void:
 
 ## Ready method.
 func _ready() -> void:
+	_initialise_databases()
+	
 	var user_interface : Node = packed_user_interface.instantiate()
 	add_child(user_interface)
+
+
+## Initialise databases.
+func _initialise_databases() -> void:
+	var db_pokemon : Node = packed_db_pokemons.instantiate()
+	get_node("Databases").add_child(db_pokemon)

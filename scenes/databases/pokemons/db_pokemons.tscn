@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://be616d8tp4did"]
+
+[ext_resource type="Script" path="res://scenes/databases/pokemons/db_pokemons.gd" id="1_i1udc"]
+
+[node name="DBPokemons" type="Node"]
+script = ExtResource("1_i1udc")
