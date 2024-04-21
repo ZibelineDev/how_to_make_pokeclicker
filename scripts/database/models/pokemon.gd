@@ -8,12 +8,12 @@ var name : String
 ## Attack damage.
 var attack : int
 ## Texture.
-var texture : Texture2D
+var texture_path : String
 
 
 ## Constructor
-func _init(_id : String, _name : String, _attack : int, _texture : Texture2D) -> void:
+func _init(_id : String, _name : String, _attack : int, _texture_path : String) -> void:
 	id = _id
 	name = _name
 	attack = _attack
-	texture = _texture
+	texture_path = _texture_path

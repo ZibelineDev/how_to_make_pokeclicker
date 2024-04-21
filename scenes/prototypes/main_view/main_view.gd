@@ -63,18 +63,20 @@ func pokemon_attack() -> void:
 ## Reset the HP back to 10 & grant pokédollars
 func reset() -> void:
 	var rand_pokemon : int = randi_range(0, 2)
-	var texture : Texture2D
+	var texture_path : String
 	
 	match rand_pokemon:
 		0:
 			@warning_ignore("unsafe_cast")
-			texture = (DBPokemons.ref.dict["0001:01"] as DBPokemon).texture
+			texture_path = (DBPokemons.ref.dict["0002:01"] as DBPokemon).texture_path
 		1:
 			@warning_ignore("unsafe_cast")
-			texture = (DBPokemons.ref.dict["0002:01"] as DBPokemon).texture
+			texture_path = (DBPokemons.ref.dict["0002:01"] as DBPokemon).texture_path
 		2:
 			@warning_ignore("unsafe_cast")
-			texture = (DBPokemons.ref.dict["0262:01"] as DBPokemon).texture
+			texture_path = (DBPokemons.ref.dict["0262:01"] as DBPokemon).texture_path
+	
+	var texture : Texture2D = load(texture_path)
 	
 	(get_node("%TextureRect") as TextureRect).texture = texture
 	
