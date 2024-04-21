@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://fhtvis1jpugg"]
+
+[ext_resource type="Script" path="res://scenes/user_interface/views/currency_view.gd" id="1_gxyqa"]
+
+[node name="CurrencyView" type="VBoxContainer" node_paths=PackedStringArray("pokedollar_label")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gxyqa")
+pokedollar_label = NodePath("Content/Pokedollar")
+
+[node name="TopBorder" type="Control" parent="."]
+custom_minimum_size = Vector2(640, 80)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TopBorder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"HeaderLarge"
+text = "Currencies"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReferenceRect" type="ReferenceRect" parent="TopBorder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(0.370493, 0.476284, 1, 1)
+
+[node name="Content" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="Pokedollar" type="Label" parent="Content"]
+layout_mode = 2
+text = "Pokedollar : <no_value>"
