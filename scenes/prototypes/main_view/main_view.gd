@@ -2,21 +2,24 @@ class_name ProtoMainView
 extends VBoxContainer
 ## A prototype meant to replicate a rudimentary clicker feature.
 
-
+## Texture of the first Pokemon
 @export
 var pokemon_00 : Texture2D
-
+## Texture of the second Pokemon
 @export
 var pokemon_01 : Texture2D
 ## Reference to the ProgressBar displaying Hp
 @export
 var progress_bar : ProgressBar
-## Data object
-var data : Data = Data.new()
+
 ## Current HP of the wild Pokémon
 var hp : float = 10
-
+## Current attack damage
 var damage : int = 1
+
+## Data object
+@onready
+var data : Data = Game.ref.data
 
 
 ## Ready method
@@ -42,6 +45,7 @@ func click_attack() -> void:
 	update_left_hp()
 
 
+## Automatic pokemon attack
 func pokemon_attack() -> void:
 	hp -= damage
 	
@@ -76,10 +80,12 @@ func reset() -> void:
 	update_pokedollar_label()
 
 
+## Update pokédollar label
 func update_pokedollar_label() -> void:
 	(get_node("%Pokedollar") as Label).text = "Pokedollar : %s" %data.pokedollar
 
 
+## Update current Hp label
 func update_left_hp() -> void:
 	(get_node("%LeftHp") as Label).text = "%s" %hp
 
@@ -89,5 +95,6 @@ func _on_texture_button_pressed() -> void:
 	click_attack()
 
 
+## Triggered every seconds
 func _on_timer_timeout() -> void:
 	pokemon_attack()

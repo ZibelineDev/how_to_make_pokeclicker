@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwbjs8r8g5mcx"]
+
+[ext_resource type="PackedScene" uid="uid://bimcdx14nvruq" path="res://scenes/user_interface/user_interface.tscn" id="1_5fa6v"]
+[ext_resource type="Script" path="res://scenes/game/game.gd" id="1_u74vw"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_u74vw")
+packed_user_interface = ExtResource("1_5fa6v")

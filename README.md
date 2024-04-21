@@ -5,7 +5,7 @@
 ### Current Goal : Make a Workable Project
 
 - [ ] Core User Interface Skeleton
-	- [ ] Currency
+	- [x] Currency
 	- [ ] Map
 	- [x] Active View (Combat, Towns, ...)
 	- [ ] Capture Settings
