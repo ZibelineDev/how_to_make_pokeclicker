@@ -16,6 +16,10 @@ var progress_bar : ProgressBar
 var hp : float = 10
 ## Current attack damage
 var damage : int = 1
+## Total encounter weight.
+var total_weight : int = -1
+## Current encounter table.
+var encounter_table : Array[RouteEncounter]
 
 ## Data object
 @onready
@@ -25,9 +29,21 @@ var data : Data = Game.ref.data
 ## Ready method
 func _ready() -> void:
 	progress_bar.value = hp
+	initialise_route()
 	update_pokedollar_label()
 	reset()
 	update_left_hp()
+
+
+## Initialise Route.
+func initialise_route() -> void:
+	@warning_ignore("unsafe_cast")
+	encounter_table = (DBRoutes.dict["001"] as DBRoute).encounter_table
+	
+	total_weight = 0
+	
+	for encounter : RouteEncounter in encounter_table:
+		total_weight += encounter.weight
 
 
 ## Reduce the HP by 1 and checks for reset
@@ -62,25 +78,24 @@ func pokemon_attack() -> void:
 
 ## Reset the HP back to 10 & grant pokédollars
 func reset() -> void:
-	var rand_pokemon : int = randi_range(0, 2)
+	var rand_pokemon : int = randi_range(1, total_weight)
 	var texture_path : String
 	
-	match rand_pokemon:
-		0:
+	var counter : int = 0
+	
+	for encounter : RouteEncounter in encounter_table:
+		counter += encounter.weight
+		
+		if counter >= rand_pokemon:
 			@warning_ignore("unsafe_cast")
-			texture_path = (DBPokemons.ref.dict["0002:01"] as DBPokemon).texture_path
-		1:
-			@warning_ignore("unsafe_cast")
-			texture_path = (DBPokemons.ref.dict["0002:01"] as DBPokemon).texture_path
-		2:
-			@warning_ignore("unsafe_cast")
-			texture_path = (DBPokemons.ref.dict["0262:01"] as DBPokemon).texture_path
+			texture_path = (DBPokemons.dict[encounter.pokemon_id] as DBPokemon).texture_path
+			break
 	
 	var texture : Texture2D = load(texture_path)
 	
 	(get_node("%TextureRect") as TextureRect).texture = texture
 	
-	hp = randi_range(10,12)
+	hp = randi_range(2,3)
 	progress_bar.max_value = hp
 	progress_bar.value = hp
 	

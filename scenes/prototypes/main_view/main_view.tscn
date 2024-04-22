@@ -10,8 +10,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -240.0
+offset_right = 320.0
+offset_bottom = 240.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 0
 script = ExtResource("1_osr3e")
 pokemon_00 = ExtResource("2_rdt5c")
 pokemon_01 = ExtResource("3_3dqf1")
@@ -155,6 +160,9 @@ text = "12"
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
 
 [connection signal="pressed" from="CentralPart/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
