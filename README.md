@@ -11,7 +11,7 @@
 	- [ ] Capture Settings
 	- [ ] Fakemon List
 - [x] Rudimentary Data Class
-- [ ] Rudimentary Database System
+- [x] Rudimentary Database System
 
 
 ## What can I do ? (Open Tasks)
