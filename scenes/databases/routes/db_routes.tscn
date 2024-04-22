@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bms60e2nv6m6l"]
+
+[ext_resource type="Script" path="res://scenes/databases/routes/db_routes.gd" id="1_hgdt5"]
+
+[node name="DBRoutes" type="Node"]
+script = ExtResource("1_hgdt5")
