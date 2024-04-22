@@ -9,7 +9,8 @@ static var ref : Game
 ## Singleton check.
 func _singleton_check() -> void:
 	if ref:
-		queue_free()
+		free()
+		return
 	
 	ref = self
 

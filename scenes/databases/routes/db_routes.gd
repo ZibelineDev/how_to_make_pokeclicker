@@ -10,6 +10,7 @@ static var ref : DBRoutes
 func _enter_tree() -> void:
 	if ref:
 		free()
+		return
 	
 	ref = self
 

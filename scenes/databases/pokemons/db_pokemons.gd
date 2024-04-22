@@ -10,6 +10,7 @@ static var ref : DBPokemons
 func _enter_tree() -> void:
 	if ref:
 		free()
+		return
 	
 	ref = self
 
