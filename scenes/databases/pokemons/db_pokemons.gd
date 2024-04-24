@@ -41,6 +41,20 @@ func _ready() -> void:
 		"res://assets/venusaur.png",
 	)
 	
+	dict["0004:01"] = DBPokemon.new(
+		"0004:01",
+		"Charmander",
+		1,
+		"res://assets/charmander.png",
+	)
+	
+	dict["0005:01"] = DBPokemon.new(
+		"0005:01",
+		"Charmeleon",
+		2,
+		"res://assets/charmeleon.png",
+	)
+	
 	dict["0262:01"] = DBPokemon.new(
 		"0262:01",
 		"Mightyena",

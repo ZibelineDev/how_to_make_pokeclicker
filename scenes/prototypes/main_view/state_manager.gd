@@ -17,6 +17,7 @@ var current_state : AbstractState
 
 func _ready() -> void:
 	change_state(enter_route_state)
+	ManagerRoutes.ref.route_updated.connect(_on_route_updated)
 
 
 func _process(delta: float) -> void:
@@ -32,3 +33,7 @@ func change_state(state : AbstractState) -> void:
 	
 	current_state = state
 	current_state.enter_state()
+
+
+func _on_route_updated() -> void:
+	change_state(leave_route_state)
