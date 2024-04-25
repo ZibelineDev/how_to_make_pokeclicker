@@ -46,4 +46,5 @@ func reset() -> void:
 	master.progress_bar.value = master.hp
 	
 	(get_node("%RightHp") as Label).text = "%s" %master.hp
+	(get_node("%MiddleHp") as Label).text = "/"
 	master.update_left_hp()

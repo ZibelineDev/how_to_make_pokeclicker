@@ -10,6 +10,8 @@ var leave_route_state : AbstractState
 var generate_pokemon_state : AbstractState
 @export
 var combat_state : AbstractState
+@export
+var capture_state : AbstractState
 
 
 var current_state : AbstractState
