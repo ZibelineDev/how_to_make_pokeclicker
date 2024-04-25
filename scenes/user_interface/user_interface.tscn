@@ -1,7 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://bimcdx14nvruq"]
+[gd_scene load_steps=4 format=3 uid="uid://bimcdx14nvruq"]
 
 [ext_resource type="PackedScene" uid="uid://fhtvis1jpugg" path="res://scenes/user_interface/views/currency_view.tscn" id="1_g4v15"]
 [ext_resource type="PackedScene" uid="uid://ccxui30cwk2ah" path="res://scenes/prototypes/main_view/main_view.tscn" id="1_xctog"]
+
+[sub_resource type="GDScript" id="GDScript_mv5is"]
+resource_name = "route_buttons"
+script/source = "extends VBoxContainer
+
+
+func _on_route_1_pressed() -> void:
+	ManagerRoutes.ref.update_route(\"001\")
+
+
+func _on_route_2_pressed() -> void:
+	ManagerRoutes.ref.update_route(\"002\")
+
+
+func _on_route_3_pressed() -> void:
+	ManagerRoutes.ref.update_route(\"003\")
+"
 
 [node name="UserInterface" type="Control"]
 layout_mode = 3
@@ -27,3 +44,40 @@ layout_mode = 2
 
 [node name="MainView" parent="VBoxContainer" instance=ExtResource("1_xctog")]
 layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+script = SubResource("GDScript_mv5is")
+
+[node name="Route1" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "Route 1"
+
+[node name="Route2" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "Route 2
+"
+
+[node name="Route3" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "Route 3
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Route1" to="MarginContainer/VBoxContainer" method="_on_route_1_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Route2" to="MarginContainer/VBoxContainer" method="_on_route_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Route3" to="MarginContainer/VBoxContainer" method="_on_route_3_pressed"]
