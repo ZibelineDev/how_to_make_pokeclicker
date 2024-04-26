@@ -38,7 +38,8 @@ func pokemon_attack() -> void:
 	if master.hp == 0:
 		on_pokemon_defeated()
 	
-	master.update_left_hp()
+	if master.hp != 0:
+		master.update_left_hp()
 
 
 func click_attack() -> void:
@@ -52,12 +53,18 @@ func click_attack() -> void:
 	if master.hp <= 0:
 		on_pokemon_defeated()
 	
-	master.update_left_hp()
+	if master.hp != 0:
+		master.update_left_hp()
 
 
 func on_pokemon_defeated() -> void:
 	Game.ref.data.pokedollar += randi_range(2, 5)
-	state_manager.change_state(state_manager.generate_pokemon_state)
+	
+	if master.should_capture:
+		state_manager.change_state(state_manager.capture_state)
+	
+	else:
+		state_manager.change_state(state_manager.generate_pokemon_state)
 
 
 func _on_combat_timer_timeout() -> void:

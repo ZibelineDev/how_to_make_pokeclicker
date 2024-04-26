@@ -6,10 +6,10 @@
 
 - [ ] Core User Interface Skeleton
 	- [x] Currency
-	- [ ] Map
+	- [x] Map
 	- [x] Active View (Combat, Towns, ...)
-	- [ ] Capture Settings
-	- [ ] Fakemon List
+	- [x] Capture Settings
+	- [ ] Pokémon List
 - [x] Rudimentary Data Class
 - [x] Rudimentary Database System
 
