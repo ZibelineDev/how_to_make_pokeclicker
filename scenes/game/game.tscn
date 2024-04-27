@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dwbjs8r8g5mcx"]
+[gd_scene load_steps=8 format=3 uid="uid://dwbjs8r8g5mcx"]
 
 [ext_resource type="PackedScene" uid="uid://bimcdx14nvruq" path="res://scenes/user_interface/user_interface.tscn" id="1_5fa6v"]
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_u74vw"]
 [ext_resource type="PackedScene" uid="uid://be616d8tp4did" path="res://scenes/databases/pokemons/db_pokemons.tscn" id="3_7k3be"]
 [ext_resource type="PackedScene" uid="uid://bms60e2nv6m6l" path="res://scenes/databases/routes/db_routes.tscn" id="4_wr1e5"]
 [ext_resource type="PackedScene" uid="uid://c4gexgfjaygq6" path="res://scenes/managers/routes/routes_manager.tscn" id="5_m4dx7"]
+[ext_resource type="PackedScene" uid="uid://cqd8qfvqsvvlo" path="res://scenes/managers/capture/capture_manager.tscn" id="6_g7rap"]
+[ext_resource type="PackedScene" uid="uid://dudwsb34403ox" path="res://scenes/managers/experience/experience_manager.tscn" id="7_dpod4"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_u74vw")
@@ -17,3 +19,7 @@ packed_db_routes = ExtResource("4_wr1e5")
 [node name="Managers" type="Node" parent="."]
 
 [node name="RoutesManager" parent="Managers" instance=ExtResource("5_m4dx7")]
+
+[node name="CaptureManager" parent="Managers" instance=ExtResource("6_g7rap")]
+
+[node name="ExperienceManager" parent="Managers" instance=ExtResource("7_dpod4")]

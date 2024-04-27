@@ -25,6 +25,8 @@ func leave_state() -> void:
 func initialise_route() -> void:
 	var route_id : String = Game.ref.data.current_route
 	
+	master.base_experience = (DBRoutes.dict[route_id] as DBRoute).base_experience
+	
 	@warning_ignore("unsafe_cast")
 	master.encounter_table = (DBRoutes.dict[route_id] as DBRoute).encounter_table
 	

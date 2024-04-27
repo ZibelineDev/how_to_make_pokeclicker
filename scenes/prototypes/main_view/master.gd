@@ -17,6 +17,10 @@ var encounter_table : Array[RouteEncounter]
 
 var should_capture : bool = false
 
+var current_pokemon_id : String
+
+var base_experience : int = -1
+
 
 @onready
 var data : Data = Game.ref.data

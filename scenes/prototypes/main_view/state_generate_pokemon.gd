@@ -25,7 +25,7 @@ func leave_state() -> void:
 ## Generate a new Pokemon
 func reset() -> void:
 	var rand_pokemon : int = randi_range(1, master.total_weight)
-	var texture_path : String
+	var texture : Texture2D
 	
 	var counter : int = 0
 	
@@ -34,10 +34,10 @@ func reset() -> void:
 		
 		if counter >= rand_pokemon:
 			@warning_ignore("unsafe_cast")
-			texture_path = (DBPokemons.dict[encounter.pokemon_id] as DBPokemon).texture_path
+			texture = (DBPokemons.dict[encounter.pokemon_id] as DBPokemon).texture
+			
+			master.current_pokemon_id = encounter.pokemon_id
 			break
-	
-	var texture : Texture2D = load(texture_path)
 	
 	(get_node("%TextureRect") as TextureRect).texture = texture
 	

@@ -28,6 +28,7 @@ func _ready() -> void:
 				RouteEncounter.new("0002:01", 3),
 				RouteEncounter.new("0003:01", 1),
 			],
+			5,
 	)
 	
 	dict["002"] = DBRoute.new(
@@ -37,6 +38,7 @@ func _ready() -> void:
 			RouteEncounter.new("0004:01", 6),
 			RouteEncounter.new("0005:01", 3),
 		],
+		8,
 	)
 	
 	dict["003"] = DBRoute.new(
@@ -45,4 +47,5 @@ func _ready() -> void:
 		[
 			RouteEncounter.new("0262:01", 1),
 		],
+		12,
 	)
