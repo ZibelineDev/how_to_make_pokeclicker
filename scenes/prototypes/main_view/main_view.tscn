@@ -218,8 +218,9 @@ texture_button = NodePath("../../../CentralPart/TextureButton")
 
 [node name="CombatTimer" type="Timer" parent="Scripts/StateManager/Combat"]
 
-[node name="Capture" type="Node" parent="Scripts/StateManager" node_paths=PackedStringArray("state_manager", "timer", "progress_bar")]
+[node name="Capture" type="Node" parent="Scripts/StateManager" node_paths=PackedStringArray("master", "state_manager", "timer", "progress_bar")]
 script = ExtResource("8_0kl80")
+master = NodePath("../../Master")
 state_manager = NodePath("..")
 timer = NodePath("CaptureTimer")
 progress_bar = NodePath("../../../BottomBorder/MarginContainer/ProgressBar")

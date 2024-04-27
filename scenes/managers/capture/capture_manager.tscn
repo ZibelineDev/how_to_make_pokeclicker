@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqd8qfvqsvvlo"]
+
+[ext_resource type="Script" path="res://scenes/managers/capture/capture_manager.gd" id="1_skq8j"]
+
+[node name="CaptureManager" type="Node"]
+script = ExtResource("1_skq8j")

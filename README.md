@@ -4,12 +4,12 @@
 
 ### Current Goal : Make a Workable Project
 
-- [ ] Core User Interface Skeleton
+- [x] Core User Interface Skeleton
 	- [x] Currency
 	- [x] Map
 	- [x] Active View (Combat, Towns, ...)
 	- [x] Capture Settings
-	- [ ] Pokémon List
+	- [x] Pokémon List
 - [x] Rudimentary Data Class
 - [x] Rudimentary Database System
 

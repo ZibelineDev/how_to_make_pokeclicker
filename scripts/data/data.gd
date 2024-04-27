@@ -4,6 +4,11 @@ extends Resource
 
 
 ## Current amount of pokedollar.
+@export
 var pokedollar : int = 0
 
+@export
 var current_route : String = "001"
+
+@export
+var captured_pokemons : Dictionary

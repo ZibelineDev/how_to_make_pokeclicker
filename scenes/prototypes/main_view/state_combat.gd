@@ -59,6 +59,7 @@ func click_attack() -> void:
 
 func on_pokemon_defeated() -> void:
 	Game.ref.data.pokedollar += randi_range(2, 5)
+	ManagerExperience.ref.add_experience(master.base_experience)
 	
 	if master.should_capture:
 		state_manager.change_state(state_manager.capture_state)

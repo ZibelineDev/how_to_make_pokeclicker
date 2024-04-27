@@ -5,6 +5,8 @@ extends AbstractState
 const CAPTURE_TIME : float = 2
 
 @export
+var master : MainViewMaster
+@export
 var state_manager : MainViewStateManager
 @export
 var timer : Timer
@@ -22,7 +24,7 @@ func enter_state() -> void:
 	(get_node("%TextureRect") as TextureRect).texture = pokeball_texture
 
 
-func process(delta: float) -> void:
+func process(_delta: float) -> void:
 	var progress : float = timer.wait_time - timer.time_left
 	progress_bar.value = progress
 	
@@ -33,6 +35,7 @@ func leave_state() -> void:
 
 
 func complete_capture() -> void:
+	ManagerCapture.ref.capture_pokemon(master.current_pokemon_id)
 	state_manager.change_state(state_manager.generate_pokemon_state)
 
 

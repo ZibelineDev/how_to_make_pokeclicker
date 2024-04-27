@@ -24,40 +24,40 @@ func _ready() -> void:
 		"0001:01",
 		"Bulbasaur",
 		1,
-		"res://assets/bulbasaur.png",
+		load("res://assets/bulbasaur.png"),
 	)
 	
 	dict["0002:01"] = DBPokemon.new(
 		"0002:01",
 		"Ivysaur",
 		2,
-		"res://assets/ivysaur.png",
+		load("res://assets/ivysaur.png"),
 	)
 	
 	dict["0003:01"] = DBPokemon.new(
 		"0003:01",
 		"Venusaur",
 		3,
-		"res://assets/venusaur.png",
+		load("res://assets/venusaur.png"),
 	)
 	
 	dict["0004:01"] = DBPokemon.new(
 		"0004:01",
 		"Charmander",
 		1,
-		"res://assets/charmander.png",
+		load("res://assets/charmander.png"),
 	)
 	
 	dict["0005:01"] = DBPokemon.new(
 		"0005:01",
 		"Charmeleon",
 		2,
-		"res://assets/charmeleon.png",
+		load("res://assets/charmeleon.png"),
 	)
 	
 	dict["0262:01"] = DBPokemon.new(
 		"0262:01",
 		"Mightyena",
 		2,
-		"res://assets/mightyena.png",
+		load("res://assets/mightyena.png"),
 	)
