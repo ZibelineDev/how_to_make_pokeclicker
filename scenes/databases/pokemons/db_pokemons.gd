@@ -24,40 +24,40 @@ func _ready() -> void:
 		"0001:01",
 		"Bulbasaur",
 		1,
-		load("res://assets/bulbasaur.png"),
+		load("res://assets/bulbasaur.png") as Texture2D,
 	)
 	
 	dict["0002:01"] = DBPokemon.new(
 		"0002:01",
 		"Ivysaur",
 		2,
-		load("res://assets/ivysaur.png"),
+		load("res://assets/ivysaur.png") as Texture2D,
 	)
 	
 	dict["0003:01"] = DBPokemon.new(
 		"0003:01",
 		"Venusaur",
 		3,
-		load("res://assets/venusaur.png"),
+		load("res://assets/venusaur.png") as Texture2D,
 	)
 	
 	dict["0004:01"] = DBPokemon.new(
 		"0004:01",
 		"Charmander",
 		1,
-		load("res://assets/charmander.png"),
+		load("res://assets/charmander.png") as Texture2D,
 	)
 	
 	dict["0005:01"] = DBPokemon.new(
 		"0005:01",
 		"Charmeleon",
 		2,
-		load("res://assets/charmeleon.png"),
+		load("res://assets/charmeleon.png") as Texture2D,
 	)
 	
 	dict["0262:01"] = DBPokemon.new(
 		"0262:01",
 		"Mightyena",
 		2,
-		load("res://assets/mightyena.png"),
+		load("res://assets/mightyena.png") as Texture2D,
 	)

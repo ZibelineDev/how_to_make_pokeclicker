@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://fhtvis1jpugg"]
 
-[ext_resource type="Script" path="res://scenes/user_interface/views/currency_view.gd" id="1_gxyqa"]
+[ext_resource type="Script" path="res://scenes/user_interface/views/currency_view/currency_view.gd" id="1_gxyqa"]
 
 [node name="CurrencyView" type="VBoxContainer" node_paths=PackedStringArray("pokedollar_label")]
 anchors_preset = 8

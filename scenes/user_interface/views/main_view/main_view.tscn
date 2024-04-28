@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://ccxui30cwk2ah"]
 
-[ext_resource type="Texture2D" uid="uid://bq3jr2f7oit5w" path="res://assets/mightyena.png" id="2_rdt5c"]
-[ext_resource type="Script" path="res://scenes/prototypes/main_view/state_manager.gd" id="4_0goka"]
-[ext_resource type="Script" path="res://scenes/prototypes/main_view/master.gd" id="4_v8ueo"]
-[ext_resource type="Script" path="res://scenes/prototypes/main_view/state_enter_route.gd" id="5_f3so7"]
-[ext_resource type="Script" path="res://scenes/prototypes/main_view/state_leave_route.gd" id="6_c1yub"]
-[ext_resource type="Script" path="res://scenes/prototypes/main_view/state_generate_pokemon.gd" id="7_j4n8q"]
-[ext_resource type="Script" path="res://scenes/prototypes/main_view/state_capture.gd" id="8_0kl80"]
-[ext_resource type="Script" path="res://scenes/prototypes/main_view/state_combat.gd" id="8_imprr"]
-[ext_resource type="Texture2D" uid="uid://dgrlry1ooo4yi" path="res://assets/pokeball.png" id="9_7g7s0"]
+[ext_resource type="Texture2D" uid="uid://bq3jr2f7oit5w" path="res://assets/mightyena.png" id="1_2vy12"]
+[ext_resource type="Script" path="res://scenes/user_interface/views/main_view/master.gd" id="2_3kw1j"]
+[ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_manager.gd" id="3_ajeio"]
+[ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_enter_route.gd" id="4_afply"]
+[ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_leave_route.gd" id="5_sbwe7"]
+[ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_generate_pokemon.gd" id="6_dbgjm"]
+[ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_combat.gd" id="7_wrf0t"]
+[ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_capture.gd" id="8_1p4fe"]
+[ext_resource type="Texture2D" uid="uid://dgrlry1ooo4yi" path="res://assets/pokeball.png" id="9_0crum"]
 
 [node name="MainView" type="VBoxContainer"]
 anchors_preset = 8
@@ -76,7 +76,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_rdt5c")
+texture = ExtResource("1_2vy12")
 expand_mode = 4
 
 [node name="TextureButton" type="TextureButton" parent="CentralPart"]
@@ -183,11 +183,11 @@ layout_mode = 2
 [node name="Scripts" type="Node" parent="."]
 
 [node name="Master" type="Node" parent="Scripts" node_paths=PackedStringArray("progress_bar")]
-script = ExtResource("4_v8ueo")
+script = ExtResource("2_3kw1j")
 progress_bar = NodePath("../../BottomBorder/MarginContainer/ProgressBar")
 
 [node name="StateManager" type="Node" parent="Scripts" node_paths=PackedStringArray("enter_route_state", "leave_route_state", "generate_pokemon_state", "combat_state", "capture_state")]
-script = ExtResource("4_0goka")
+script = ExtResource("3_ajeio")
 enter_route_state = NodePath("EnterRoute")
 leave_route_state = NodePath("LeaveRoute")
 generate_pokemon_state = NodePath("GeneratePokemon")
@@ -195,22 +195,22 @@ combat_state = NodePath("Combat")
 capture_state = NodePath("Capture")
 
 [node name="EnterRoute" type="Node" parent="Scripts/StateManager" node_paths=PackedStringArray("master", "state_manager")]
-script = ExtResource("5_f3so7")
+script = ExtResource("4_afply")
 master = NodePath("../../Master")
 state_manager = NodePath("..")
 
 [node name="LeaveRoute" type="Node" parent="Scripts/StateManager" node_paths=PackedStringArray("master", "state_manager")]
-script = ExtResource("6_c1yub")
+script = ExtResource("5_sbwe7")
 master = NodePath("../../Master")
 state_manager = NodePath("..")
 
 [node name="GeneratePokemon" type="Node" parent="Scripts/StateManager" node_paths=PackedStringArray("master", "state_manager")]
-script = ExtResource("7_j4n8q")
+script = ExtResource("6_dbgjm")
 master = NodePath("../../Master")
 state_manager = NodePath("..")
 
 [node name="Combat" type="Node" parent="Scripts/StateManager" node_paths=PackedStringArray("master", "state_manager", "combat_timer", "texture_button")]
-script = ExtResource("8_imprr")
+script = ExtResource("7_wrf0t")
 master = NodePath("../../Master")
 state_manager = NodePath("..")
 combat_timer = NodePath("CombatTimer")
@@ -219,12 +219,12 @@ texture_button = NodePath("../../../CentralPart/TextureButton")
 [node name="CombatTimer" type="Timer" parent="Scripts/StateManager/Combat"]
 
 [node name="Capture" type="Node" parent="Scripts/StateManager" node_paths=PackedStringArray("master", "state_manager", "timer", "progress_bar")]
-script = ExtResource("8_0kl80")
+script = ExtResource("8_1p4fe")
 master = NodePath("../../Master")
 state_manager = NodePath("..")
 timer = NodePath("CaptureTimer")
 progress_bar = NodePath("../../../BottomBorder/MarginContainer/ProgressBar")
-pokeball_texture = ExtResource("9_7g7s0")
+pokeball_texture = ExtResource("9_0crum")
 
 [node name="CaptureTimer" type="Timer" parent="Scripts/StateManager/Capture"]
 

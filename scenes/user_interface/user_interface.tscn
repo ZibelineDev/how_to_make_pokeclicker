@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bimcdx14nvruq"]
 
-[ext_resource type="PackedScene" uid="uid://fhtvis1jpugg" path="res://scenes/user_interface/views/currency_view.tscn" id="1_g4v15"]
-[ext_resource type="PackedScene" uid="uid://ccxui30cwk2ah" path="res://scenes/prototypes/main_view/main_view.tscn" id="1_xctog"]
+[ext_resource type="PackedScene" uid="uid://fhtvis1jpugg" path="res://scenes/user_interface/views/currency_view/currency_view.tscn" id="1_7e88w"]
+[ext_resource type="PackedScene" uid="uid://ccxui30cwk2ah" path="res://scenes/user_interface/views/main_view/main_view.tscn" id="2_oq2uv"]
 [ext_resource type="Script" path="res://scenes/user_interface/pokemon_list.gd" id="3_aycae"]
-[ext_resource type="PackedScene" uid="uid://5n5iafd3nlv7" path="res://scenes/prototypes/main_view/components/pokemon_list_component/pokemon_list_component.tscn" id="4_7wnem"]
+[ext_resource type="PackedScene" uid="uid://5n5iafd3nlv7" path="res://scenes/user_interface/views/main_view/components/pokemon_list_component/pokemon_list_component.tscn" id="4_j88im"]
 
 [sub_resource type="GDScript" id="GDScript_mv5is"]
 resource_name = "route_buttons"
@@ -41,10 +41,10 @@ offset_bottom = 691.0
 grow_horizontal = 2
 theme_override_constants/separation = 32
 
-[node name="CurrencyView" parent="VBoxContainer" instance=ExtResource("1_g4v15")]
+[node name="CurrencyView" parent="VBoxContainer" instance=ExtResource("1_7e88w")]
 layout_mode = 2
 
-[node name="MainView" parent="VBoxContainer" instance=ExtResource("1_xctog")]
+[node name="MainView" parent="VBoxContainer" instance=ExtResource("2_oq2uv")]
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -97,7 +97,7 @@ theme_override_constants/margin_bottom = 16
 [node name="PokemonList" type="VBoxContainer" parent="PokemonListMargin"]
 layout_mode = 2
 script = ExtResource("3_aycae")
-packed_list_item = ExtResource("4_7wnem")
+packed_list_item = ExtResource("4_j88im")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Route1" to="MarginContainer/VBoxContainer" method="_on_route_1_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Route2" to="MarginContainer/VBoxContainer" method="_on_route_2_pressed"]
