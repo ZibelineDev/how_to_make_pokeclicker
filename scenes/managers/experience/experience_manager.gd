@@ -32,7 +32,9 @@ func update_level(id : String) -> void:
 		level = 6
 	
 	@warning_ignore("unsafe_cast")
-	if level != (Game.ref.data.captured_pokemons[id] as DataCapturedPokemon).level:
+	var old_level : int = (Game.ref.data.captured_pokemons[id] as DataCapturedPokemon).level
+	
+	if level != old_level:
 		should_notify = true
 	
 	@warning_ignore("unsafe_cast")
