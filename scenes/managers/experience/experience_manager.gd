@@ -20,7 +20,7 @@ func update_level(id : String) -> void:
 	var level : int = 1
 	var should_notify : bool = false
 	
-	level = experience ** (1.0/3.0)
+	level = int(experience ** (1.0/3.0))
 	
 	@warning_ignore("unsafe_cast")
 	var old_level : int = (Game.ref.data.captured_pokemons[id] as DataCapturedPokemon).level
@@ -40,5 +40,12 @@ func add_experience(experience : int) -> void:
 	
 	for key : String in keys:
 		@warning_ignore("unsafe_cast")
-		(Game.ref.data.captured_pokemons[key] as DataCapturedPokemon).experience += experience
+		var target : int = (Game.ref.data.captured_pokemons[key] as DataCapturedPokemon).experience
+		var new_value : int = target + experience
+		
+		if (new_value) >= 1000000:
+			target = 1000000
+		else:
+			target = new_value
+		
 		update_level(key)
