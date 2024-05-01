@@ -16,7 +16,7 @@ signal pokemon_level_up(id : String)
 
 func update_level(id : String) -> void:
 	@warning_ignore("unsafe_cast")
-	var experience : int = (Game.ref.data.captured_pokemons[id] as DataCapturedPokemon).experience
+	var experience : float = (Game.ref.data.captured_pokemons[id] as DataCapturedPokemon).experience
 	var level : int = 1
 	var should_notify : bool = false
 	
@@ -35,17 +35,19 @@ func update_level(id : String) -> void:
 		pokemon_level_up.emit(id)
 
 
-func add_experience(experience : int) -> void:
+func add_experience(experience : float) -> void:
 	var keys : Array[Variant] = Game.ref.data.captured_pokemons.keys()
 	
 	for key : String in keys:
 		@warning_ignore("unsafe_cast")
-		var target : int = (Game.ref.data.captured_pokemons[key] as DataCapturedPokemon).experience
-		var new_value : int = target + experience
+		var old_value : float = (Game.ref.data.captured_pokemons[key] as DataCapturedPokemon).experience
+		var new_value : float = old_value + experience
 		
 		if (new_value) >= 1000000:
-			target = 1000000
+			@warning_ignore("unsafe_cast")
+			(Game.ref.data.captured_pokemons[key] as DataCapturedPokemon).experience = 1000000
 		else:
-			target = new_value
+			@warning_ignore("unsafe_cast")
+			(Game.ref.data.captured_pokemons[key] as DataCapturedPokemon).experience = new_value
 		
 		update_level(key)

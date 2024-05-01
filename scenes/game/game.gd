@@ -37,6 +37,8 @@ func _enter_tree() -> void:
 ## Ready method.
 func _ready() -> void:
 	_initialise_databases()
+	_initalise_starter_pokemon()
+	_initialise_damages()
 	
 	var user_interface : Node = packed_user_interface.instantiate()
 	add_child(user_interface)
@@ -51,3 +53,12 @@ func _initialise_databases() -> void:
 	
 	var db_routes : Node = packed_db_routes.instantiate()
 	databases.add_child(db_routes)
+
+
+## Initialises damages.
+func _initialise_damages() -> void:
+	ManagerDamage.ref.calculate_damages()
+
+
+func _initalise_starter_pokemon() -> void:
+	ManagerCapture.ref.capture_pokemon("0001:01")

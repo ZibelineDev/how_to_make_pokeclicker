@@ -28,7 +28,7 @@ func leave_state() -> void:
 
 ## Automatic pokemon attack
 func pokemon_attack() -> void:
-	master.hp -= master.damage
+	master.hp -= ManagerDamage.ref.attack
 	
 	if master.hp <= 0:
 		master.hp = 0

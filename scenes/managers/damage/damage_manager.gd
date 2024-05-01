@@ -1,0 +1,72 @@
+class_name ManagerDamage
+extends Node
+## Manages attack.
+
+## Singleton ref.
+static var ref : ManagerDamage
+
+## Singleton check.
+func _enter_tree() -> void:
+	if ref:
+		free()
+		return
+	
+	ref = self
+
+
+## Emitted when the total attack is updated.
+signal attack_updated
+## Emitted when a Pokémon got its attack changed.
+signal pokemon_attack_updated(key: String)
+
+
+## Total attack
+var attack : int = -1
+
+
+func _ready() -> void:
+	ManagerExperience.ref.pokemon_level_up.connect(_on_pokemon_level_up)
+	ManagerCapture.ref.new_pokemon_captured.connect(_on_new_pokemon_captured)
+
+
+## Calculate attack from all sources.
+func calculate_damages() -> void:
+	var keys : Array[Variant] = Game.ref.data.captured_pokemons.keys()
+	
+	var _attack : float = 0
+	
+	for key : String in keys:
+		calculate_pokemon_damages(key)
+		@warning_ignore("unsafe_cast")
+		var data_pokemon : DataCapturedPokemon = Game.ref.data.captured_pokemons[key] as DataCapturedPokemon
+		
+		_attack += data_pokemon.attack
+	
+	attack = int(_attack)
+	attack_updated.emit()
+
+
+## Calculate a single Pokémon attack.
+func calculate_pokemon_damages(key : String) -> void:
+	@warning_ignore("unsafe_cast")
+	var data_pokemon : DataCapturedPokemon = Game.ref.data.captured_pokemons[key] as DataCapturedPokemon
+	@warning_ignore("unsafe_cast")
+	var db_pokemon : DBPokemon = DBPokemons.dict[key] as DBPokemon
+	
+	var pokemon_attack : float = db_pokemon.attack * float(data_pokemon.level) / 100.0
+	
+	if pokemon_attack < 1:
+		pokemon_attack = 1
+	
+	data_pokemon.attack = pokemon_attack
+	pokemon_attack_updated.emit(key)
+
+
+## Triggered when a Pokémon levels up.
+func _on_pokemon_level_up(_key : String) -> void:
+	calculate_damages()
+
+
+## Triggered when a new Pokémon is captured.
+func _on_new_pokemon_captured(_key : String) -> void:
+	calculate_damages()

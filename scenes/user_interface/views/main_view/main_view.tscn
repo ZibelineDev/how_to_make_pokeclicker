@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccxui30cwk2ah"]
+[gd_scene load_steps=11 format=3 uid="uid://ccxui30cwk2ah"]
 
 [ext_resource type="Texture2D" uid="uid://bq3jr2f7oit5w" path="res://assets/mightyena.png" id="1_2vy12"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/master.gd" id="2_3kw1j"]
@@ -9,6 +9,26 @@
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_combat.gd" id="7_wrf0t"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_capture.gd" id="8_1p4fe"]
 [ext_resource type="Texture2D" uid="uid://dgrlry1ooo4yi" path="res://assets/pokeball.png" id="9_0crum"]
+
+[sub_resource type="GDScript" id="GDScript_80h4q"]
+resource_name = "attack_label"
+script/source = "extends Label
+
+
+func _ready() -> void:
+	_update_text()
+	ManagerDamage.ref.attack_updated.connect(_on_attack_update)
+
+
+func _update_text() -> void:
+	var _text : String = \"Attack : %s\" %ManagerDamage.ref.attack
+	
+	text = _text
+
+
+func _on_attack_update() -> void:
+	_update_text()
+"
 
 [node name="MainView" type="VBoxContainer"]
 anchors_preset = 8
@@ -95,6 +115,7 @@ offset_bottom = 40.0
 [node name="Attack" type="Label" parent="CentralPart/VBoxContainer"]
 layout_mode = 2
 text = "Attack : 1"
+script = SubResource("GDScript_80h4q")
 
 [node name="ClickAttack" type="Label" parent="CentralPart/VBoxContainer"]
 layout_mode = 2
