@@ -40,6 +40,7 @@ func reset() -> void:
 			break
 	
 	(get_node("%TextureRect") as TextureRect).texture = texture
+	(get_node("%TextureRect") as TextureRect).custom_minimum_size.x = 160
 	
 	master.hp = randi_range(9,12)
 	master.progress_bar.max_value = master.hp

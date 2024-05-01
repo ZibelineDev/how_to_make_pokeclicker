@@ -22,6 +22,7 @@ func enter_state() -> void:
 	update_labels_for_capture()
 	progress_bar.max_value = CAPTURE_TIME
 	(get_node("%TextureRect") as TextureRect).texture = pokeball_texture
+	(get_node("%TextureRect") as TextureRect).custom_minimum_size.x = 64
 
 
 func process(_delta: float) -> void:
