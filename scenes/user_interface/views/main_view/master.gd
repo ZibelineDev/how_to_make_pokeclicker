@@ -14,12 +14,14 @@ var damage : int = 4
 var total_weight : int = -1
 ## Current encounter table.
 var encounter_table : Array[RouteEncounter]
-
+## Whether or not the capture should be initiated after the Pokémon is defeated.
 var should_capture : bool = false
-
+## Current Pokémon.
 var current_pokemon_id : String
-
+## Base experience of the route.
 var base_experience : int = -1
+## Base hp of the pokémon of the route.
+var base_hp : int = -1
 
 
 @onready

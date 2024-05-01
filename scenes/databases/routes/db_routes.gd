@@ -24,28 +24,34 @@ func _ready() -> void:
 			"001",
 			"Route 1",
 			[
-				RouteEncounter.new("0001:01", 6),
-				RouteEncounter.new("0002:01", 3),
-				RouteEncounter.new("0003:01", 1),
+				RouteEncounter.new("0016:01", 25),
+				RouteEncounter.new("0019:01", 25),
+				RouteEncounter.new("0043:01", 25),
 			],
 			5,
+			10,
 	)
 	
 	dict["002"] = DBRoute.new(
 		"002",
 		"Route 2",
 		[
-			RouteEncounter.new("0004:01", 6),
-			RouteEncounter.new("0005:01", 3),
+			RouteEncounter.new("0016:01", 25),
+			RouteEncounter.new("0019:01", 25),
+			RouteEncounter.new("0043:01", 25),
 		],
 		8,
+		25,
 	)
 	
 	dict["003"] = DBRoute.new(
 		"003",
 		"Route 3",
 		[
-			RouteEncounter.new("0262:01", 1),
+			RouteEncounter.new("0016:01", 25),
+			RouteEncounter.new("0019:01", 25),
+			RouteEncounter.new("0043:01", 25),
 		],
 		12,
+		50,
 	)
