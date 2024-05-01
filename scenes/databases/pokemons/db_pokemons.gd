@@ -25,6 +25,7 @@ func _ready() -> void:
 		"Bulbasaur",
 		53,
 		load("res://assets/bulbasaur.png") as Texture2D,
+		10,
 	)
 	
 	dict["0002:01"] = DBPokemon.new(
@@ -32,6 +33,7 @@ func _ready() -> void:
 		"Ivysaur",
 		68,
 		load("res://assets/ivysaur.png") as Texture2D,
+		5,
 	)
 	
 	dict["0003:01"] = DBPokemon.new(
@@ -39,6 +41,7 @@ func _ready() -> void:
 		"Venusaur",
 		88,
 		load("res://assets/venusaur.png") as Texture2D,
+		1,
 	)
 	
 	dict["0004:01"] = DBPokemon.new(
@@ -46,6 +49,7 @@ func _ready() -> void:
 		"Charmander",
 		52,
 		load("res://assets/charmander.png") as Texture2D,
+		10,
 	)
 	
 	dict["0005:01"] = DBPokemon.new(
@@ -53,6 +57,7 @@ func _ready() -> void:
 		"Charmeleon",
 		68,
 		load("res://assets/charmeleon.png") as Texture2D,
+		5,
 	)
 	
 	dict["0016:01"] = DBPokemon.new(
@@ -60,6 +65,7 @@ func _ready() -> void:
 		"Pidgey",
 		42,
 		load("res://assets/pidgey.png") as Texture2D,
+		75,
 	)
 	
 	dict["0019:01"] = DBPokemon.new(
@@ -67,6 +73,7 @@ func _ready() -> void:
 		"Rattata",
 		42,
 		load("res://assets/rattata.png") as Texture2D,
+		80,
 	)
 	
 	dict["0043:01"] = DBPokemon.new(
@@ -74,6 +81,7 @@ func _ready() -> void:
 		"Oddish",
 		53,
 		load("res://assets/oddish.png") as Texture2D,
+		75,
 	)
 	
 	dict["0262:01"] = DBPokemon.new(
@@ -81,4 +89,5 @@ func _ready() -> void:
 		"Mightyena",
 		70,
 		load("res://assets/mightyena.png") as Texture2D,
+		10,
 	)

@@ -8,6 +8,9 @@ var progress_bar : ProgressBar
 
 ## Current HP of the wild Pokémon
 var hp : float = -1
+## Capture rate of the current Pokémon.
+var capture_rate : int = -1
+
 ## Current attack damage
 var damage : int = 4
 ## Total encounter weight.
@@ -22,6 +25,7 @@ var current_pokemon_id : String
 var base_experience : int = -1
 ## Base hp of the pokémon of the route.
 var base_hp : int = -1
+
 
 
 @onready

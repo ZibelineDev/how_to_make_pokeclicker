@@ -36,7 +36,10 @@ func leave_state() -> void:
 
 
 func complete_capture() -> void:
-	ManagerCapture.ref.capture_pokemon(master.current_pokemon_id)
+	var roll : int = randi_range(0,99)
+	
+	if roll < master.capture_rate - 1:
+		ManagerCapture.ref.capture_pokemon(master.current_pokemon_id)
 	state_manager.change_state(state_manager.generate_pokemon_state)
 
 
