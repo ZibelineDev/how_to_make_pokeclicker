@@ -39,6 +39,8 @@ func reset() -> void:
 			master.current_pokemon_id = encounter.pokemon_id
 			
 			master.capture_rate = (DBPokemons.dict[encounter.pokemon_id] as DBPokemon).capture_rate
+			
+			(get_node("%PokemonLabel") as Label).text = (DBPokemons.dict[encounter.pokemon_id] as DBPokemon).name
 			break
 	
 	(get_node("%TextureRect") as TextureRect).texture = texture
