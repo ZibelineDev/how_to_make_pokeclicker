@@ -1,9 +1,11 @@
 class_name PokemonListItem
 extends Control
+## Item displaying a captured Pokémon in the list.
 
+## Pokémon name & level.
 @export
 var label : Label
-
+## Id of the Pokémon.
 var pokemon_id : String
 
 
@@ -35,3 +37,7 @@ func update_label() -> void:
 func _on_pokemon_level_up(id : String) -> void:
 	if id == pokemon_id:
 		update_label()
+
+
+func _on_pressed() -> void:
+	TeamManager.ref.add_pokemon(pokemon_id)

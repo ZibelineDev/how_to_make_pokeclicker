@@ -6,9 +6,12 @@ extends Resource
 ## Current amount of pokedollar.
 @export
 var pokedollar : int = 0
-
+## Last route visited.
 @export
 var current_route : String = "001"
-
+## All captured Pokémons.
 @export
 var captured_pokemons : Dictionary
+## Current team.
+@export 
+var team : Array[String] = []

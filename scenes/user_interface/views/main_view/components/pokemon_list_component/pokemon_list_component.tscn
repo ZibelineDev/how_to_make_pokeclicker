@@ -2,10 +2,8 @@
 
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/components/pokemon_list_component/pokemon_list_component.gd" id="1_fxcg6"]
 
-[node name="PokemonListComponent" type="Control" node_paths=PackedStringArray("label")]
+[node name="PokemonListComponent" type="TextureButton" node_paths=PackedStringArray("label")]
 custom_minimum_size = Vector2(288, 80)
-layout_mode = 3
-anchors_preset = 0
 script = ExtResource("1_fxcg6")
 label = NodePath("MarginContainer/HBoxContainer/Label")
 
@@ -16,6 +14,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
@@ -23,11 +22,13 @@ theme_override_constants/margin_bottom = 16
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Texture" type="TextureRect" parent="MarginContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
+mouse_filter = 2
 expand_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
@@ -37,12 +38,4 @@ size_flags_horizontal = 3
 text = "Pokémon Name"
 horizontal_alignment = 2
 
-[node name="ReferenceRect" type="ReferenceRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-border_color = Color(1, 1, 1, 1)
-editor_only = false
+[connection signal="pressed" from="." to="." method="_on_pressed"]
