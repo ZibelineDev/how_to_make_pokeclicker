@@ -51,3 +51,13 @@ func add_experience_to_pokemons(experience : float, keys : Array[Variant]) -> vo
 			(Game.ref.data.captured_pokemons[key] as DataCapturedPokemon).experience = new_value
 		
 		update_level(key)
+
+
+func level_up_pokemon(level : int, key : String) -> void:
+	if not Game.ref.data.captured_pokemons.has(key):
+		return
+	
+	var experience : int = level ** 3
+	
+	(Game.ref.data.captured_pokemons[key] as DataCapturedPokemon).experience = experience + 1
+	update_level(key)
