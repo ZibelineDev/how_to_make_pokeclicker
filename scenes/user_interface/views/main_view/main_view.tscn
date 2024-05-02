@@ -199,9 +199,6 @@ text = "12"
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 2
-
 [node name="Scripts" type="Node" parent="."]
 
 [node name="Master" type="Node" parent="Scripts" node_paths=PackedStringArray("progress_bar")]

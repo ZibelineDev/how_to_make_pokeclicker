@@ -49,9 +49,9 @@ func _ready() -> void:
 			"003",
 			"Route 3",
 			[
-				RouteEncounter.new("0016:01", 25),
-				RouteEncounter.new("0019:01", 25),
-				RouteEncounter.new("0043:01", 25),
+				RouteEncounter.new("0016:01", 12),
+				RouteEncounter.new("0010:01", 25),
+				RouteEncounter.new("0013:01", 25),
 			],
 			17,
 			50,

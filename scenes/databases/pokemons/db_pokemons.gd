@@ -60,6 +60,22 @@ func _ready() -> void:
 		5,
 	)
 	
+	dict["0010:01"] = DBPokemon.new(
+		"0010:01",
+		"Caterpie",
+		33,
+		load("res://assets/caterpie.png") as Texture2D,
+		90,
+	)
+	
+	dict["0013:01"] = DBPokemon.new(
+		"0013:01",
+		"Weedle",
+		33,
+		load("res://assets/weedle.png") as Texture2D,
+		90,
+	)
+	
 	dict["0016:01"] = DBPokemon.new(
 		"0016:01",
 		"Pidgey",
