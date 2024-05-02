@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwbjs8r8g5mcx"]
+[gd_scene load_steps=11 format=3 uid="uid://dwbjs8r8g5mcx"]
 
 [ext_resource type="PackedScene" uid="uid://bimcdx14nvruq" path="res://scenes/user_interface/user_interface.tscn" id="1_5fa6v"]
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_u74vw"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dudwsb34403ox" path="res://scenes/managers/experience/experience_manager.tscn" id="7_dpod4"]
 [ext_resource type="PackedScene" uid="uid://cnkno3m4eips5" path="res://scenes/managers/damage/damage_manager.tscn" id="8_kq4m1"]
 [ext_resource type="PackedScene" uid="uid://ckuro7sth1r3e" path="res://scenes/managers/team/team_manager.tscn" id="9_ihywl"]
+[ext_resource type="PackedScene" uid="uid://b4dg8qipuu2m4" path="res://scenes/managers/moves/move_manager.tscn" id="10_47gdd"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_u74vw")
@@ -27,6 +28,8 @@ packed_db_routes = ExtResource("4_wr1e5")
 [node name="DamageManager" parent="Managers" instance=ExtResource("8_kq4m1")]
 
 [node name="TeamManager" parent="Managers" instance=ExtResource("9_ihywl")]
+
+[node name="MoveManager" parent="Managers" instance=ExtResource("10_47gdd")]
 
 [node name="Databases" type="Node" parent="."]
 

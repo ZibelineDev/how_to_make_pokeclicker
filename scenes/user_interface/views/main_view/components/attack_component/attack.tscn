@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvjybt4ebwsac"]
+
+[ext_resource type="Script" path="res://scenes/user_interface/views/main_view/components/attack_component/attack.gd" id="1_sv0k6"]
+
+[node name="Attack" type="Panel"]
+custom_minimum_size = Vector2(160, 80)
+script = ExtResource("1_sv0k6")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Attack"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

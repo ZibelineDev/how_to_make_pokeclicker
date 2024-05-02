@@ -15,6 +15,7 @@ var texture_button : TextureButton
 func enter_state() -> void:
 	combat_timer.start()
 	texture_button.disabled = false
+	ManagerMoves.ref.move_requested.emit()
 
 
 func process(_delta: float) -> void:

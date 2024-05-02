@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://ccxui30cwk2ah"]
+[gd_scene load_steps=13 format=3 uid="uid://ccxui30cwk2ah"]
 
 [ext_resource type="Texture2D" uid="uid://bq3jr2f7oit5w" path="res://assets/mightyena.png" id="1_2vy12"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/master.gd" id="2_3kw1j"]
+[ext_resource type="Script" path="res://scenes/user_interface/views/main_view/attacks.gd" id="2_7om5i"]
+[ext_resource type="PackedScene" uid="uid://dvjybt4ebwsac" path="res://scenes/user_interface/views/main_view/components/attack_component/attack.tscn" id="3_6m7xx"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_manager.gd" id="3_ajeio"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_enter_route.gd" id="4_afply"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_leave_route.gd" id="5_sbwe7"]
@@ -139,6 +141,19 @@ theme_override_constants/margin_bottom = 16
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
+
+[node name="Attacks" type="HBoxContainer" parent="CentralPart"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 16
+alignment = 1
+script = ExtResource("2_7om5i")
+packed_attack = ExtResource("3_6m7xx")
 
 [node name="BottomBorder" type="Control" parent="."]
 custom_minimum_size = Vector2(640, 80)

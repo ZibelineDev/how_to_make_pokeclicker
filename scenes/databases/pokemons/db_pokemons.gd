@@ -25,6 +25,7 @@ func _ready() -> void:
 			"Bulbasaur",
 			load("res://assets/bulbasaur.png") as Texture2D,
 			[ManagerDamage.Types.GRASS, ManagerDamage.Types.POISON],
+			["002"],
 			53,
 			10,
 	)
@@ -34,6 +35,7 @@ func _ready() -> void:
 			"Ivysaur",
 			load("res://assets/ivysaur.png") as Texture2D,
 			[ManagerDamage.Types.GRASS, ManagerDamage.Types.POISON],
+			["002"],
 			68,
 			5,
 	)
@@ -43,6 +45,7 @@ func _ready() -> void:
 			"Venusaur",
 			load("res://assets/venusaur.png") as Texture2D,
 			[ManagerDamage.Types.GRASS, ManagerDamage.Types.POISON],
+			["002"],
 			88,
 			1,
 	)
@@ -52,6 +55,7 @@ func _ready() -> void:
 			"Charmander",
 			load("res://assets/charmander.png") as Texture2D,
 			[ManagerDamage.Types.FIRE],
+			[],
 			52,
 			10,
 	)
@@ -61,6 +65,7 @@ func _ready() -> void:
 			"Charmeleon",
 			load("res://assets/charmeleon.png") as Texture2D,
 			[ManagerDamage.Types.FIRE],
+			[],
 			68,
 			5,
 	)
@@ -70,6 +75,7 @@ func _ready() -> void:
 			"Caterpie",
 			load("res://assets/caterpie.png") as Texture2D,
 			[ManagerDamage.Types.BUG],
+			[],
 			33,
 			90,
 	)
@@ -79,6 +85,7 @@ func _ready() -> void:
 			"Weedle",
 			load("res://assets/weedle.png") as Texture2D,
 			[ManagerDamage.Types.BUG, ManagerDamage.Types.POISON],
+			[],
 			33,
 			90,
 	)
@@ -88,6 +95,7 @@ func _ready() -> void:
 			"Pidgey",
 			load("res://assets/pidgey.png") as Texture2D,
 			[ManagerDamage.Types.NORMAL, ManagerDamage.Types.FLYING],
+			["001"],
 			42,
 			75,
 	)
@@ -97,6 +105,7 @@ func _ready() -> void:
 			"Rattata",
 			load("res://assets/rattata.png") as Texture2D,
 			[ManagerDamage.Types.NORMAL],
+			["001"],
 			42,
 			80,
 	)
@@ -106,6 +115,7 @@ func _ready() -> void:
 			"Spearow",
 			load("res://assets/spearow.png") as Texture2D,
 			[ManagerDamage.Types.NORMAL, ManagerDamage.Types.FLYING],
+			[],
 			44,
 			75,
 	)
@@ -115,6 +125,7 @@ func _ready() -> void:
 			"Nidoran-F",
 			load("res://assets/nidoran-f.png") as Texture2D,
 			[ManagerDamage.Types.POISON],
+			[],
 			46,
 			50,
 	)
@@ -124,6 +135,7 @@ func _ready() -> void:
 			"Nidoran-M",
 			load("res://assets/nidoran-m.png") as Texture2D,
 			[ManagerDamage.Types.POISON],
+			[],
 			46,
 			50,
 	)
@@ -133,6 +145,7 @@ func _ready() -> void:
 			"Oddish",
 			load("res://assets/oddish.png") as Texture2D,
 			[ManagerDamage.Types.GRASS, ManagerDamage.Types.POISON],
+			[],
 			53,
 			75,
 	)
@@ -142,6 +155,7 @@ func _ready() -> void:
 			"Mightyena",
 			load("res://assets/mightyena.png") as Texture2D,
 			[ManagerDamage.Types.DARK],
+			[],
 			70,
 			10,
 	)
