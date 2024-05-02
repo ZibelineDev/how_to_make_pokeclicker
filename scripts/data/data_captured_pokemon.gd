@@ -13,7 +13,7 @@ var capture_counter : int = 1
 var level : int = 1
 ## Current experience.
 @export 
-var experience : float = 0.0
+var experience : float = 1.0
 ## Current attack.
 var attack : float = -1
 

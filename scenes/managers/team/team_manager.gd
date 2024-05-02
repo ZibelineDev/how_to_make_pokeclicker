@@ -5,7 +5,7 @@ static var ref : TeamManager
 
 func _enter_tree() -> void:
 	if ref:
-		free()
+		queue_free()
 		return
 	
 	ref = self

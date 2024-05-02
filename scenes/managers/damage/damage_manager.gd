@@ -8,7 +8,7 @@ static var ref : ManagerDamage
 ## Singleton check.
 func _enter_tree() -> void:
 	if ref:
-		free()
+		queue_free()
 		return
 	
 	ref = self
@@ -18,6 +18,29 @@ func _enter_tree() -> void:
 signal attack_updated
 ## Emitted when a Pokémon got its attack changed.
 signal pokemon_attack_updated(key: String)
+
+
+## Enum containing types and their index.
+enum Types {
+	NORMAL = 0,
+	FIGHTING = 1,
+	FLYING = 2,
+	POISON = 3,
+	GROUND = 4,
+	ROCK = 5,
+	BUG = 6,
+	GHOST = 7,
+	STEEL = 8,
+	FIRE = 9,
+	WATER = 10,
+	GRASS = 11,
+	ELECTRIC = 12,
+	PSYCHIC = 13,
+	ICE = 14,
+	DRAGON = 15,
+	DARK = 16,
+	FAIRY = 17,
+}
 
 
 ## Total attack
@@ -33,7 +56,7 @@ func _ready() -> void:
 func calculate_damages() -> void:
 	var keys : Array[Variant] = Game.ref.data.captured_pokemons.keys()
 	
-	var _attack : float = 0
+	var _attack : float = 10
 	
 	for key : String in keys:
 		calculate_pokemon_damages(key)

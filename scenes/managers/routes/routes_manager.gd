@@ -7,7 +7,7 @@ static var ref : ManagerRoutes
 
 func _enter_tree() -> void:
 	if ref:
-		free()
+		queue_free()
 		return
 	
 	ref = self

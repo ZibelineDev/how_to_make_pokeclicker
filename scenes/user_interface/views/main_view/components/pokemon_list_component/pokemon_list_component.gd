@@ -16,7 +16,6 @@ func _ready() -> void:
 
 
 func initialise_texture() -> void:
-	@warning_ignore("unsafe_cast")
 	var texture : Texture2D = (DBPokemons.ref.dict[pokemon_id] as DBPokemon).texture
 	(get_node("%Texture") as TextureRect).texture = texture
 
@@ -24,10 +23,8 @@ func initialise_texture() -> void:
 func update_label() -> void:
 	var text : String = ""
 	
-	@warning_ignore("unsafe_cast")
 	text += (DBPokemons.ref.dict[pokemon_id] as DBPokemon).name
 	text += (" (")
-	@warning_ignore("unsafe_cast")
 	text += str((Game.ref.data.captured_pokemons[pokemon_id] as DataCapturedPokemon).level)
 	text += ")"
 	

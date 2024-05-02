@@ -36,7 +36,6 @@ func _enter_tree() -> void:
 
 ## Ready method.
 func _ready() -> void:
-	_initialise_databases()
 	_initalise_starter_pokemon()
 	_initialise_damages()
 	
