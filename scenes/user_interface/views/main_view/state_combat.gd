@@ -15,6 +15,7 @@ var texture_button : TextureButton
 func enter_state() -> void:
 	combat_timer.start()
 	texture_button.disabled = false
+	ManagerMoves.ref.move_requested.emit()
 
 
 func process(_delta: float) -> void:
@@ -28,7 +29,7 @@ func leave_state() -> void:
 
 ## Automatic pokemon attack
 func pokemon_attack() -> void:
-	master.hp -= master.damage
+	master.hp -= ManagerDamage.ref.attack
 	
 	if master.hp <= 0:
 		master.hp = 0

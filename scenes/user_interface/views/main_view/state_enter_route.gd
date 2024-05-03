@@ -29,6 +29,9 @@ func initialise_route() -> void:
 	master.base_experience = (DBRoutes.dict[route_id] as DBRoute).base_experience
 	
 	@warning_ignore("unsafe_cast")
+	master.base_hp = (DBRoutes.dict[route_id] as DBRoute).base_hp
+	
+	@warning_ignore("unsafe_cast")
 	master.encounter_table = (DBRoutes.dict[route_id] as DBRoute).encounter_table
 	
 	master.total_weight = 0

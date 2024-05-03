@@ -25,3 +25,4 @@ func leave_state() -> void:
 func clear_route() -> void:
 	master.total_weight = -1
 	master.encounter_table = []
+	master.base_experience = -1

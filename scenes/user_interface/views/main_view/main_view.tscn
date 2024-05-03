@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccxui30cwk2ah"]
+[gd_scene load_steps=13 format=3 uid="uid://ccxui30cwk2ah"]
 
 [ext_resource type="Texture2D" uid="uid://bq3jr2f7oit5w" path="res://assets/mightyena.png" id="1_2vy12"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/master.gd" id="2_3kw1j"]
+[ext_resource type="Script" path="res://scenes/user_interface/views/main_view/attacks.gd" id="2_7om5i"]
+[ext_resource type="PackedScene" uid="uid://dvjybt4ebwsac" path="res://scenes/user_interface/views/main_view/components/attack_component/attack.tscn" id="3_6m7xx"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_manager.gd" id="3_ajeio"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_enter_route.gd" id="4_afply"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_leave_route.gd" id="5_sbwe7"]
@@ -9,6 +11,26 @@
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_combat.gd" id="7_wrf0t"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/state_capture.gd" id="8_1p4fe"]
 [ext_resource type="Texture2D" uid="uid://dgrlry1ooo4yi" path="res://assets/pokeball.png" id="9_0crum"]
+
+[sub_resource type="GDScript" id="GDScript_80h4q"]
+resource_name = "attack_label"
+script/source = "extends Label
+
+
+func _ready() -> void:
+	_update_text()
+	ManagerDamage.ref.attack_updated.connect(_on_attack_update)
+
+
+func _update_text() -> void:
+	var _text : String = \"Attack : %s\" %ManagerDamage.ref.attack
+	
+	text = _text
+
+
+func _on_attack_update() -> void:
+	_update_text()
+"
 
 [node name="MainView" type="VBoxContainer"]
 anchors_preset = 8
@@ -36,7 +58,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="TopBorder"]
+[node name="PokemonLabel" type="Label" parent="TopBorder"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -95,6 +118,7 @@ offset_bottom = 40.0
 [node name="Attack" type="Label" parent="CentralPart/VBoxContainer"]
 layout_mode = 2
 text = "Attack : 1"
+script = SubResource("GDScript_80h4q")
 
 [node name="ClickAttack" type="Label" parent="CentralPart/VBoxContainer"]
 layout_mode = 2
@@ -117,6 +141,19 @@ theme_override_constants/margin_bottom = 16
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
+
+[node name="Attacks" type="HBoxContainer" parent="CentralPart"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 16
+alignment = 1
+script = ExtResource("2_7om5i")
+packed_attack = ExtResource("3_6m7xx")
 
 [node name="BottomBorder" type="Control" parent="."]
 custom_minimum_size = Vector2(640, 80)
@@ -176,9 +213,6 @@ text = "12"
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 2
 
 [node name="Scripts" type="Node" parent="."]
 
