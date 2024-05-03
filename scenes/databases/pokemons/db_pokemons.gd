@@ -95,7 +95,7 @@ func _ready() -> void:
 			"Pidgey",
 			load("res://assets/pidgey.png") as Texture2D,
 			[ManagerDamage.Types.NORMAL, ManagerDamage.Types.FLYING],
-			["001"],
+			["001", "003"],
 			42,
 			75,
 	)

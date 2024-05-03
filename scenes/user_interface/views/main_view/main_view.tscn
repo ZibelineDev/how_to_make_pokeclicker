@@ -251,6 +251,7 @@ combat_timer = NodePath("CombatTimer")
 texture_button = NodePath("../../../CentralPart/TextureButton")
 
 [node name="CombatTimer" type="Timer" parent="Scripts/StateManager/Combat"]
+wait_time = 2.0
 
 [node name="Capture" type="Node" parent="Scripts/StateManager" node_paths=PackedStringArray("master", "state_manager", "timer", "progress_bar")]
 script = ExtResource("8_1p4fe")

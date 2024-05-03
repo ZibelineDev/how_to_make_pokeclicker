@@ -61,5 +61,7 @@ func _initialise_damages() -> void:
 
 func _initalise_starter_pokemon() -> void:
 	ManagerCapture.ref.capture_pokemon("0001:01")
+	ManagerCapture.ref.capture_pokemon("0016:01")
+	ManagerCapture.ref.capture_pokemon("0019:01")
 	TeamManager.ref.add_pokemon("0001:01")
 	ManagerExperience.ref.level_up_pokemon(5, "0001:01")

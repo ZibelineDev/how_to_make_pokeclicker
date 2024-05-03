@@ -50,20 +50,25 @@ var attack : int = -1
 func _ready() -> void:
 	ManagerExperience.ref.pokemon_level_up.connect(_on_pokemon_level_up)
 	ManagerCapture.ref.new_pokemon_captured.connect(_on_new_pokemon_captured)
+	TeamManager.ref.team_updated.connect(_on_team_updated)
 
 
 ## Calculate attack from all sources.
 func calculate_damages() -> void:
 	var keys : Array[Variant] = Game.ref.data.captured_pokemons.keys()
 	
-	var _attack : float = 10
+	var _attack : float = 0
 	
 	for key : String in keys:
 		calculate_pokemon_damages(key)
-		@warning_ignore("unsafe_cast")
 		var data_pokemon : DataCapturedPokemon = Game.ref.data.captured_pokemons[key] as DataCapturedPokemon
 		
-		_attack += data_pokemon.attack
+		_attack += data_pokemon.attack * 0.1
+	
+	for key : String in Game.ref.data.team:
+		var data_pokemon : DataCapturedPokemon = Game.ref.data.captured_pokemons[key] as DataCapturedPokemon
+		
+		_attack += data_pokemon.attack * 0.9
 	
 	attack = int(_attack)
 	attack_updated.emit()
@@ -71,12 +76,13 @@ func calculate_damages() -> void:
 
 ## Calculate a single Pokémon attack.
 func calculate_pokemon_damages(key : String) -> void:
-	@warning_ignore("unsafe_cast")
 	var data_pokemon : DataCapturedPokemon = Game.ref.data.captured_pokemons[key] as DataCapturedPokemon
-	@warning_ignore("unsafe_cast")
 	var db_pokemon : DBPokemon = DBPokemons.dict[key] as DBPokemon
 	
 	var pokemon_attack : float = db_pokemon.attack * float(data_pokemon.level) / 100.0
+	
+	## Temporary multiplier before type rework
+	pokemon_attack *= 2
 	
 	if pokemon_attack < 1:
 		pokemon_attack = 1
@@ -92,4 +98,8 @@ func _on_pokemon_level_up(_key : String) -> void:
 
 ## Triggered when a new Pokémon is captured.
 func _on_new_pokemon_captured(_key : String) -> void:
+	calculate_damages()
+
+
+func _on_team_updated() -> void:
 	calculate_damages()
