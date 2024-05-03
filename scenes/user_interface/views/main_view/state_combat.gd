@@ -12,6 +12,10 @@ var combat_timer : Timer
 var texture_button : TextureButton
 
 
+func _ready() -> void:
+	ManagerMoves.ref.move_used.connect(_on_move_used)
+
+
 func enter_state() -> void:
 	combat_timer.start()
 	texture_button.disabled = false
@@ -27,9 +31,10 @@ func leave_state() -> void:
 	texture_button.disabled = true
 
 
-## Automatic pokemon attack
-func pokemon_attack() -> void:
-	master.hp -= ManagerDamage.ref.attack
+func apply_damages_from_move(key : String) -> void:
+	var move_damage : int = int(ManagerDamage.ref.attack * (DBAttacks.dict[key] as DBAttack).coef)
+	
+	master.hp -= move_damage
 	
 	if master.hp <= 0:
 		master.hp = 0
@@ -41,21 +46,12 @@ func pokemon_attack() -> void:
 	
 	if master.hp != 0:
 		master.update_left_hp()
+		ManagerMoves.ref.move_requested.emit()
 
 
-func click_attack() -> void:
-	master.hp -= 1
-	
-	if master.hp <= 0:
-		master.hp = 0
-	
-	master.progress_bar.value = master.hp
-	
-	if master.hp <= 0:
-		on_pokemon_defeated()
-	
-	if master.hp != 0:
-		master.update_left_hp()
+func reset_timer() -> void:
+	combat_timer.stop()
+	combat_timer.start()
 
 
 func on_pokemon_defeated() -> void:
@@ -70,8 +66,16 @@ func on_pokemon_defeated() -> void:
 
 
 func _on_combat_timer_timeout() -> void:
-	pokemon_attack()
+	##pokemon_attack()
+	ManagerMoves.ref.use_random_move()
+	pass
 
 
 func _on_texture_button_pressed() -> void:
-	click_attack()
+	##click_attack()
+	pass
+
+
+func _on_move_used(key : String) -> void:
+	apply_damages_from_move(key)
+	reset_timer()

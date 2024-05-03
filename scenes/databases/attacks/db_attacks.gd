@@ -15,4 +15,11 @@ static var dict : Dictionary = {
 		ManagerDamage.Types.GRASS,
 		1.1,
 	),
+	
+	"003" : DBAttack.new(
+		"003",
+		"Gust",
+		ManagerDamage.Types.FLYING,
+		1.1,
+	),
 }

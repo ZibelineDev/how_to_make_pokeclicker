@@ -56,7 +56,7 @@ func _ready() -> void:
 func calculate_damages() -> void:
 	var keys : Array[Variant] = Game.ref.data.captured_pokemons.keys()
 	
-	var _attack : float = 10
+	var _attack : float = 0
 	
 	for key : String in keys:
 		calculate_pokemon_damages(key)
