@@ -10,6 +10,7 @@ var state_manager : MainViewStateManager
 
 func enter_state() -> void:
 	initialise_route()
+	
 	state_manager.change_state(state_manager.generate_pokemon_state)
 
 

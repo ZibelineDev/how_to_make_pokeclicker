@@ -20,6 +20,6 @@ var attack : float = -1
 
 ## Constructor.
 func _init(
-	_id : String,
+	_id : String = "-1",
 ) -> void:
 	id = _id

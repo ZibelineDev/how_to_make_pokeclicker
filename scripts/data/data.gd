@@ -11,9 +11,9 @@ var pokedollar : int = 0
 var current_route : String = "001"
 ## All captured Pokémons.
 @export
-var captured_pokemons : Dictionary
+var captured_pokemons : Dictionary = {}
 ## Current team.
 @export 
 var team : Array[String] = []
 @export
-var routes : Dictionary
+var routes : Dictionary = {}
