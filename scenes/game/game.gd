@@ -64,8 +64,6 @@ func _initialise_damages() -> void:
 func _initalise_starter_pokemon() -> void:
 	if not Game.ref.data.captured_pokemons.has("0025:01"):
 		ManagerCapture.ref.capture_pokemon("0025:01")
-		##ManagerCapture.ref.capture_pokemon("0016:01")
-		##ManagerCapture.ref.capture_pokemon("0019:01")
 		TeamManager.ref.add_pokemon("0025:01")
 		ManagerExperience.ref.level_up_pokemon(5, "0025:01")
 
