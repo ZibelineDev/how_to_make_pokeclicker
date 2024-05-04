@@ -32,7 +32,7 @@ func leave_state() -> void:
 
 
 func apply_damages_from_move(key : String) -> void:
-	var move_damage : int = int(ManagerDamage.ref.attack * (DBAttacks.dict[key] as DBAttack).coef)
+	var move_damage : int = ManagerDamage.ref.calculate_move_attack(key, master.current_pokemon_id)
 	
 	master.hp -= move_damage
 	
