@@ -4,3 +4,7 @@
 
 [node name="MoveManager" type="Node"]
 script = ExtResource("1_jtpto")
+
+[node name="ClickTimer" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true

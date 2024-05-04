@@ -22,4 +22,32 @@ static var dict : Dictionary = {
 		ManagerDamage.Types.FLYING,
 		1.1,
 	),
+	
+	"004" : DBAttack.new(
+		"004",
+		"Acid",
+		ManagerDamage.Types.POISON,
+		1.1,
+	),
+	
+	"005" : DBAttack.new(
+		"005",
+		"Poison Sting",
+		ManagerDamage.Types.POISON,
+		1.1,
+	),
+	
+	"006" : DBAttack.new(
+		"006",
+		"Peck",
+		ManagerDamage.Types.FLYING,
+		1.1,
+	),
+	
+	"007" : DBAttack.new(
+		"007",
+		"Bug Bite",
+		ManagerDamage.Types.BUG,
+		1.1,
+	),
 }

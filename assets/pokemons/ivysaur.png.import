@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn875fmivi1vd"
-path="res://.godot/imported/caterpie.png-5bb505fc0e1a21183e2fc40adc934eab.ctex"
+uid="uid://b24hydlxcem5l"
+path="res://.godot/imported/ivysaur.png-78b7b9111c15ca2900baa4c09ce782b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/caterpie.png"
-dest_files=["res://.godot/imported/caterpie.png-5bb505fc0e1a21183e2fc40adc934eab.ctex"]
+source_file="res://assets/pokemons/ivysaur.png"
+dest_files=["res://.godot/imported/ivysaur.png-78b7b9111c15ca2900baa4c09ce782b6.ctex"]
 
 [params]
 

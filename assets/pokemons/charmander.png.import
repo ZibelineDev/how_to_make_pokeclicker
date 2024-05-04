@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq3jr2f7oit5w"
-path="res://.godot/imported/mightyena.png-3a14d44bb85e4ddbea92cad2a23cc12a.ctex"
+uid="uid://bifqoknspevqu"
+path="res://.godot/imported/charmander.png-99758b034de60230c836035d7d268999.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mightyena.png"
-dest_files=["res://.godot/imported/mightyena.png-3a14d44bb85e4ddbea92cad2a23cc12a.ctex"]
+source_file="res://assets/pokemons/charmander.png"
+dest_files=["res://.godot/imported/charmander.png-99758b034de60230c836035d7d268999.ctex"]
 
 [params]
 

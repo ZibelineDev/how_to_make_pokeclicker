@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqt6fjxebrg77"
-path="res://.godot/imported/pidgey.png-4fdb7c3301b39b50b449ba466fa501d0.ctex"
+uid="uid://qc844yq4jnwk"
+path="res://.godot/imported/blastoise.png-7d2901a60526cc41090f081794f9e4fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pidgey.png"
-dest_files=["res://.godot/imported/pidgey.png-4fdb7c3301b39b50b449ba466fa501d0.ctex"]
+source_file="res://assets/pokemons/blastoise.png"
+dest_files=["res://.godot/imported/blastoise.png-7d2901a60526cc41090f081794f9e4fc.ctex"]
 
 [params]
 

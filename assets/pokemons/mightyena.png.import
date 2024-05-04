@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8mfd1k6eukvd"
-path="res://.godot/imported/oddish.png-121036316ce7fc7e6fc63658d480d046.ctex"
+uid="uid://bq3jr2f7oit5w"
+path="res://.godot/imported/mightyena.png-024e9ee50f71945bd582f1a88abfdad2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/oddish.png"
-dest_files=["res://.godot/imported/oddish.png-121036316ce7fc7e6fc63658d480d046.ctex"]
+source_file="res://assets/pokemons/mightyena.png"
+dest_files=["res://.godot/imported/mightyena.png-024e9ee50f71945bd582f1a88abfdad2.ctex"]
 
 [params]
 

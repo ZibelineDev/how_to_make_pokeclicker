@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxuksboy1cdcm"
-path="res://.godot/imported/weedle.png-9440be066facb3331821264c6d85f142.ctex"
+uid="uid://bp7pttnpqwyku"
+path="res://.godot/imported/nidoran-f.png-1bcb74614808c8046c410a1f02bb2235.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/weedle.png"
-dest_files=["res://.godot/imported/weedle.png-9440be066facb3331821264c6d85f142.ctex"]
+source_file="res://assets/pokemons/nidoran-f.png"
+dest_files=["res://.godot/imported/nidoran-f.png-1bcb74614808c8046c410a1f02bb2235.ctex"]
 
 [params]
 

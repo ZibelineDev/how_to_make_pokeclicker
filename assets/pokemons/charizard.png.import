@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bax5iiepwkyb6"
-path="res://.godot/imported/spearow.png-74956a0725fc5706674be49f0ce822dd.ctex"
+uid="uid://cng1mki7fqgtr"
+path="res://.godot/imported/charizard.png-1e0b545487276d5ed65884d4b7be1def.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spearow.png"
-dest_files=["res://.godot/imported/spearow.png-74956a0725fc5706674be49f0ce822dd.ctex"]
+source_file="res://assets/pokemons/charizard.png"
+dest_files=["res://.godot/imported/charizard.png-1e0b545487276d5ed65884d4b7be1def.ctex"]
 
 [params]
 

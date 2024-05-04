@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c232m21rilg5k"
-path="res://.godot/imported/wartortle.png-6ae7e8962ca141bc0dd235a3ff83c3d3.ctex"
+uid="uid://b84ql8sarv00s"
+path="res://.godot/imported/venusaur.png-c36708631bb5a5bc18a5d4cab8cc19a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/wartortle.png"
-dest_files=["res://.godot/imported/wartortle.png-6ae7e8962ca141bc0dd235a3ff83c3d3.ctex"]
+source_file="res://assets/pokemons/venusaur.png"
+dest_files=["res://.godot/imported/venusaur.png-c36708631bb5a5bc18a5d4cab8cc19a0.ctex"]
 
 [params]
 

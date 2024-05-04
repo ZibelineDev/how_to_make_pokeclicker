@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://ccxui30cwk2ah"]
 
-[ext_resource type="Texture2D" uid="uid://bq3jr2f7oit5w" path="res://assets/mightyena.png" id="1_2vy12"]
+[ext_resource type="Texture2D" uid="uid://bq3jr2f7oit5w" path="res://assets/pokemons/mightyena.png" id="1_nj5wc"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/master.gd" id="2_3kw1j"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/attacks.gd" id="2_7om5i"]
 [ext_resource type="PackedScene" uid="uid://dvjybt4ebwsac" path="res://scenes/user_interface/views/main_view/components/attack_component/attack.tscn" id="3_6m7xx"]
@@ -99,7 +99,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_2vy12")
+texture = ExtResource("1_nj5wc")
 expand_mode = 4
 
 [node name="TextureButton" type="TextureButton" parent="CentralPart"]

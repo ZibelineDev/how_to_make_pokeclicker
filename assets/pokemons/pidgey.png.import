@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bifqoknspevqu"
-path="res://.godot/imported/charmander.png-8c9edf514e6a2b55a67db73704d78b45.ctex"
+uid="uid://bqt6fjxebrg77"
+path="res://.godot/imported/pidgey.png-b5726364db4b6c6a9f6836aac0737b92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/charmander.png"
-dest_files=["res://.godot/imported/charmander.png-8c9edf514e6a2b55a67db73704d78b45.ctex"]
+source_file="res://assets/pokemons/pidgey.png"
+dest_files=["res://.godot/imported/pidgey.png-b5726364db4b6c6a9f6836aac0737b92.ctex"]
 
 [params]
 

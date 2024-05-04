@@ -68,6 +68,16 @@ func clear_chosen_moves() -> void:
 	chosen_moves = []
 
 
+func use_move(key : String) -> void:
+	var timer : Timer = (get_node("ClickTimer") as Timer)
+	
+	if timer.time_left > 0:
+		return
+	
+	timer.start()
+	move_used.emit(key)
+
+
 func use_random_move() -> void:
 	if chosen_moves.size() <= 0:
 		return
