@@ -50,4 +50,11 @@ static var dict : Dictionary = {
 		ManagerDamage.Types.BUG,
 		1.1,
 	),
+	
+	"008" : DBAttack.new(
+		"008",
+		"Thunder Shock",
+		ManagerDamage.Types.ELECTRIC,
+		1.1,
+	),
 }

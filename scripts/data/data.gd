@@ -15,3 +15,5 @@ var captured_pokemons : Dictionary
 ## Current team.
 @export 
 var team : Array[String] = []
+@export
+var routes : Dictionary

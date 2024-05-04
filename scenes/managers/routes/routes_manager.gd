@@ -14,6 +14,8 @@ func _enter_tree() -> void:
 
 
 signal route_updated
+signal pokemon_defeated(key : String)
+signal route_unlocked(key : String)
 
 
 func update_route(route_id : String) -> void:

@@ -120,6 +120,16 @@ func _ready() -> void:
 			75,
 	)
 	
+	dict["0025:01"] = DBPokemon.new(
+			"0025:01",
+			"Pikachu",
+			load("res://assets/pokemons/pikachu.png") as Texture2D,
+			[ManagerDamage.Types.ELECTRIC],
+			["008"],
+			54,
+			25,
+	)
+	
 	dict["0029:01"] = DBPokemon.new(
 			"0029:01",
 			"Nidoran-F",

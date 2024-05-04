@@ -57,6 +57,7 @@ func reset_timer() -> void:
 func on_pokemon_defeated() -> void:
 	Game.ref.data.pokedollar += randi_range(2, 5)
 	ManagerExperience.ref.add_experience(master.base_experience)
+	ManagerRoutes.ref.pokemon_defeated.emit(Game.ref.data.current_route)
 	
 	if master.should_capture:
 		state_manager.change_state(state_manager.capture_state)
