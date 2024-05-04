@@ -15,7 +15,7 @@ func update_label() -> void:
 
 
 func trigger_move() -> void:
-	ManagerMoves.ref.move_used.emit(key)
+	ManagerMoves.ref.use_move(key)
 
 
 func _on_texture_button_pressed() -> void:
