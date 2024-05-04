@@ -25,7 +25,7 @@ func _ready() -> void:
 			"Bulbasaur",
 			load("res://assets/pokemons/bulbasaur.png") as Texture2D,
 			[ManagerDamage.Types.GRASS, ManagerDamage.Types.POISON],
-			["002"],
+			["002", "004"],
 			53,
 			10,
 	)
@@ -75,7 +75,7 @@ func _ready() -> void:
 			"Caterpie",
 			load("res://assets/pokemons/caterpie.png") as Texture2D,
 			[ManagerDamage.Types.BUG],
-			[],
+			["007"],
 			33,
 			90,
 	)
@@ -85,7 +85,7 @@ func _ready() -> void:
 			"Weedle",
 			load("res://assets/pokemons/weedle.png") as Texture2D,
 			[ManagerDamage.Types.BUG, ManagerDamage.Types.POISON],
-			[],
+			["007", "005"],
 			33,
 			90,
 	)
@@ -115,7 +115,7 @@ func _ready() -> void:
 			"Spearow",
 			load("res://assets/pokemons/spearow.png") as Texture2D,
 			[ManagerDamage.Types.NORMAL, ManagerDamage.Types.FLYING],
-			[],
+			["001", "006"],
 			44,
 			75,
 	)
@@ -125,7 +125,7 @@ func _ready() -> void:
 			"Nidoran-F",
 			load("res://assets/pokemons/nidoran-f.png") as Texture2D,
 			[ManagerDamage.Types.POISON],
-			[],
+			["005"],
 			46,
 			50,
 	)
@@ -135,7 +135,7 @@ func _ready() -> void:
 			"Nidoran-M",
 			load("res://assets/pokemons/nidoran-m.png") as Texture2D,
 			[ManagerDamage.Types.POISON],
-			[],
+			["005"],
 			46,
 			50,
 	)
@@ -145,7 +145,7 @@ func _ready() -> void:
 			"Oddish",
 			load("res://assets/pokemons/oddish.png") as Texture2D,
 			[ManagerDamage.Types.GRASS, ManagerDamage.Types.POISON],
-			[],
+			["002", "004"],
 			53,
 			75,
 	)
