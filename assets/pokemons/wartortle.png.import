@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp7pttnpqwyku"
-path="res://.godot/imported/nidoran-f.png-b7700e479808b664cbbb795f327c2e04.ctex"
+uid="uid://c232m21rilg5k"
+path="res://.godot/imported/wartortle.png-32fb2a7d705fecce8ede700ce7402d78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/nidoran-f.png"
-dest_files=["res://.godot/imported/nidoran-f.png-b7700e479808b664cbbb795f327c2e04.ctex"]
+source_file="res://assets/pokemons/wartortle.png"
+dest_files=["res://.godot/imported/wartortle.png-32fb2a7d705fecce8ede700ce7402d78.ctex"]
 
 [params]
 

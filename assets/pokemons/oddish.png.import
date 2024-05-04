@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjja0t5kslhlg"
-path="res://.godot/imported/bulbasaur.png-ce8c7bae6c783b4c3d557a287207ed3a.ctex"
+uid="uid://c8mfd1k6eukvd"
+path="res://.godot/imported/oddish.png-14feacd61ef78d4a4ebec686b9f62160.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bulbasaur.png"
-dest_files=["res://.godot/imported/bulbasaur.png-ce8c7bae6c783b4c3d557a287207ed3a.ctex"]
+source_file="res://assets/pokemons/oddish.png"
+dest_files=["res://.godot/imported/oddish.png-14feacd61ef78d4a4ebec686b9f62160.ctex"]
 
 [params]
 

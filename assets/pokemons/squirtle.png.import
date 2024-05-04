@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cshfxmjpftmh3"
-path="res://.godot/imported/rattata.png-4dcf4f320ff228dc4716d775201a1797.ctex"
+uid="uid://e1uf13gij774"
+path="res://.godot/imported/squirtle.png-b988a553466d72c10234b7cf21fab9d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/rattata.png"
-dest_files=["res://.godot/imported/rattata.png-4dcf4f320ff228dc4716d775201a1797.ctex"]
+source_file="res://assets/pokemons/squirtle.png"
+dest_files=["res://.godot/imported/squirtle.png-b988a553466d72c10234b7cf21fab9d6.ctex"]
 
 [params]
 

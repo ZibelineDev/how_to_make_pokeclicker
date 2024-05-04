@@ -1,10 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvjybt4ebwsac"]
+[gd_scene load_steps=20 format=3 uid="uid://dvjybt4ebwsac"]
 
+[ext_resource type="StyleBox" uid="uid://bb4vaf8bcgdd" path="res://assets/panel_styles/water.tres" id="1_j10dw"]
+[ext_resource type="StyleBox" uid="uid://bssvgex4o2m1l" path="res://assets/panel_styles/normal.tres" id="1_m1k3k"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/components/attack_component/attack.gd" id="1_sv0k6"]
+[ext_resource type="StyleBox" uid="uid://1tlf3nb6vuvv" path="res://assets/panel_styles/bug.tres" id="3_duxcf"]
+[ext_resource type="StyleBox" uid="uid://bbyu1old1fgtm" path="res://assets/panel_styles/fighting.tres" id="4_ealw6"]
+[ext_resource type="StyleBox" uid="uid://cjagbuiydym4i" path="res://assets/panel_styles/dragon.tres" id="5_r48qu"]
+[ext_resource type="StyleBox" uid="uid://beqsoemi5pnn3" path="res://assets/panel_styles/electric.tres" id="6_iu22n"]
+[ext_resource type="StyleBox" uid="uid://bkx1xa2r7l3vm" path="res://assets/panel_styles/flying.tres" id="7_o5616"]
+[ext_resource type="StyleBox" uid="uid://lty4mjwhopwd" path="res://assets/panel_styles/ghost.tres" id="8_nklai"]
+[ext_resource type="StyleBox" uid="uid://br7ru7m6ks5tm" path="res://assets/panel_styles/grass.tres" id="9_t2426"]
+[ext_resource type="StyleBox" uid="uid://33wr5b6kvxr" path="res://assets/panel_styles/ground.tres" id="10_5yc6e"]
+[ext_resource type="StyleBox" uid="uid://b2jmwuri4mjcn" path="res://assets/panel_styles/ice.tres" id="11_wcc67"]
+[ext_resource type="StyleBox" uid="uid://b5bc3elkfry7f" path="res://assets/panel_styles/poison.tres" id="12_ragl3"]
+[ext_resource type="StyleBox" uid="uid://koay8pmj4e6r" path="res://assets/panel_styles/psychic.tres" id="13_a6kd3"]
+[ext_resource type="StyleBox" uid="uid://gmmspskv70sw" path="res://assets/panel_styles/rock.tres" id="14_mugxp"]
+[ext_resource type="StyleBox" uid="uid://7d6i5gn3cpmo" path="res://assets/panel_styles/steel.tres" id="15_s1xt0"]
+[ext_resource type="StyleBox" uid="uid://dmbo8gds1wvvu" path="res://assets/panel_styles/fire.tres" id="16_51tes"]
+[ext_resource type="StyleBox" uid="uid://cf131b8fww8b" path="res://assets/panel_styles/dark.tres" id="17_ldmg5"]
+[ext_resource type="StyleBox" uid="uid://ik1qf6ix64vq" path="res://assets/panel_styles/fairy.tres" id="18_jmukr"]
 
 [node name="Attack" type="Panel"]
 custom_minimum_size = Vector2(160, 80)
 script = ExtResource("1_sv0k6")
+normal = ExtResource("1_m1k3k")
+bug = ExtResource("3_duxcf")
+fighting = ExtResource("4_ealw6")
+dragon = ExtResource("5_r48qu")
+electric = ExtResource("6_iu22n")
+flying = ExtResource("7_o5616")
+ghost = ExtResource("8_nklai")
+grass = ExtResource("9_t2426")
+ground = ExtResource("10_5yc6e")
+ice = ExtResource("11_wcc67")
+poison = ExtResource("12_ragl3")
+psychic = ExtResource("13_a6kd3")
+rock = ExtResource("14_mugxp")
+steel = ExtResource("15_s1xt0")
+fire = ExtResource("16_51tes")
+water = ExtResource("1_j10dw")
+dark = ExtResource("17_ldmg5")
+fairy = ExtResource("18_jmukr")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

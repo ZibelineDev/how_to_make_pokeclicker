@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b84ql8sarv00s"
-path="res://.godot/imported/venusaur.png-29b828206a8e3522e4f06dd2016931aa.ctex"
+uid="uid://dn875fmivi1vd"
+path="res://.godot/imported/caterpie.png-abb5de4a553073a549446be3822499d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/venusaur.png"
-dest_files=["res://.godot/imported/venusaur.png-29b828206a8e3522e4f06dd2016931aa.ctex"]
+source_file="res://assets/pokemons/caterpie.png"
+dest_files=["res://.godot/imported/caterpie.png-abb5de4a553073a549446be3822499d9.ctex"]
 
 [params]
 

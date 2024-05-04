@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qc844yq4jnwk"
-path="res://.godot/imported/blastoise.png-d4a675ba7e2c602c2ee3c08a0a97e0ac.ctex"
+uid="uid://cjja0t5kslhlg"
+path="res://.godot/imported/bulbasaur.png-05e3e1168fcda5085385feef245ca87f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/blastoise.png"
-dest_files=["res://.godot/imported/blastoise.png-d4a675ba7e2c602c2ee3c08a0a97e0ac.ctex"]
+source_file="res://assets/pokemons/bulbasaur.png"
+dest_files=["res://.godot/imported/bulbasaur.png-05e3e1168fcda5085385feef245ca87f.ctex"]
 
 [params]
 

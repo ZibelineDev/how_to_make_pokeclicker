@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfs8ainhjisqx"
-path="res://.godot/imported/nidoran-m.png-b87c3ba8aa0261724ddfee9e3db3f542.ctex"
+path="res://.godot/imported/nidoran-m.png-19185e39d211ab36d94c9fef14a20640.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/nidoran-m.png"
-dest_files=["res://.godot/imported/nidoran-m.png-b87c3ba8aa0261724ddfee9e3db3f542.ctex"]
+source_file="res://assets/pokemons/nidoran-m.png"
+dest_files=["res://.godot/imported/nidoran-m.png-19185e39d211ab36d94c9fef14a20640.ctex"]
 
 [params]
 
