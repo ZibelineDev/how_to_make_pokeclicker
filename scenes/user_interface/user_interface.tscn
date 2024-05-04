@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bimcdx14nvruq"]
+[gd_scene load_steps=7 format=3 uid="uid://bimcdx14nvruq"]
 
+[ext_resource type="Script" path="res://scenes/user_interface/route_button.gd" id="1_6hwbm"]
 [ext_resource type="PackedScene" uid="uid://fhtvis1jpugg" path="res://scenes/user_interface/views/currency_view/currency_view.tscn" id="1_7e88w"]
 [ext_resource type="PackedScene" uid="uid://ccxui30cwk2ah" path="res://scenes/user_interface/views/main_view/main_view.tscn" id="2_oq2uv"]
 [ext_resource type="PackedScene" uid="uid://ctbrxtnjvr7a" path="res://scenes/user_interface/views/pokemon_list_view/pokemon_list_view.tscn" id="3_00lm4"]
@@ -76,22 +77,28 @@ layout_mode = 2
 theme_override_constants/separation = 16
 script = SubResource("GDScript_mv5is")
 
-[node name="Route1" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/VBoxContainer"]
+[node name="Route001" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 text = "Route 1"
+script = ExtResource("1_6hwbm")
+key = "001"
 
-[node name="Route2" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/VBoxContainer"]
+[node name="Route002" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 text = "Route 2
 "
+script = ExtResource("1_6hwbm")
+key = "002"
 
-[node name="Route3" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/VBoxContainer"]
+[node name="Route003" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 text = "Route 3
 "
+script = ExtResource("1_6hwbm")
+key = "003"
 
 [node name="PokemonListMargin" parent="VBoxContainer/Body/Main" instance=ExtResource("3_00lm4")]
 layout_mode = 1
@@ -136,6 +143,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/VBoxContainer/Route1" to="VBoxContainer/Body/Main/MarginContainer/VBoxContainer" method="_on_route_1_pressed"]
-[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/VBoxContainer/Route2" to="VBoxContainer/Body/Main/MarginContainer/VBoxContainer" method="_on_route_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/VBoxContainer/Route3" to="VBoxContainer/Body/Main/MarginContainer/VBoxContainer" method="_on_route_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/VBoxContainer/Route001" to="VBoxContainer/Body/Main/MarginContainer/VBoxContainer" method="_on_route_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/VBoxContainer/Route002" to="VBoxContainer/Body/Main/MarginContainer/VBoxContainer" method="_on_route_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/VBoxContainer/Route003" to="VBoxContainer/Body/Main/MarginContainer/VBoxContainer" method="_on_route_3_pressed"]

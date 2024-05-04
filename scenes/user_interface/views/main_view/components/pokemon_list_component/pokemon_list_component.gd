@@ -29,6 +29,17 @@ func update_label() -> void:
 	text += ")"
 	
 	label.text = text
+	
+	var tooltip : String = ""
+	
+	tooltip += "Attack : %s" %int((Game.ref.data.captured_pokemons[pokemon_id] as DataCapturedPokemon).attack)
+	tooltip += "\n\n"
+	tooltip += "Moves :"
+	
+	for move : String in (DBPokemons.dict[pokemon_id] as DBPokemon).moves:
+		tooltip += "\n   -%s" %(DBAttacks.dict[move] as DBAttack).name
+	
+	tooltip_text = tooltip
 
 
 func _on_pokemon_level_up(id : String) -> void:

@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4gexgfjaygq6"]
+[gd_scene load_steps=5 format=3 uid="uid://c4gexgfjaygq6"]
 
 [ext_resource type="Script" path="res://scenes/managers/routes/routes_manager.gd" id="1_5mfx2"]
+[ext_resource type="Script" path="res://scripts/routes/route_001.gd" id="2_vyym4"]
+[ext_resource type="Script" path="res://scripts/routes/route_002.gd" id="3_yadw1"]
+[ext_resource type="Script" path="res://scripts/routes/route_003.gd" id="4_i2qvl"]
 
 [node name="RoutesManager" type="Node"]
 script = ExtResource("1_5mfx2")
+
+[node name="Route001" type="Node" parent="."]
+script = ExtResource("2_vyym4")
+
+[node name="Route002" type="Node" parent="."]
+script = ExtResource("3_yadw1")
+
+[node name="Route003" type="Node" parent="."]
+script = ExtResource("4_i2qvl")
