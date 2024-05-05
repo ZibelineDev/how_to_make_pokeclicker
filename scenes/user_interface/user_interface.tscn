@@ -72,33 +72,230 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Body/Main/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Body/Main/MarginContainer"]
 layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
 theme_override_constants/separation = 16
 script = SubResource("GDScript_mv5is")
 
-[node name="Route001" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/VBoxContainer"]
+[node name="Route001" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
+focus_mode = 0
 text = "Route 1"
 script = ExtResource("1_6hwbm")
 key = "001"
 
-[node name="Route002" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/VBoxContainer"]
+[node name="Route002" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
+focus_mode = 0
 text = "Route 2
 "
 script = ExtResource("1_6hwbm")
 key = "002"
 
-[node name="Route003" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/VBoxContainer"]
+[node name="Route003" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
+focus_mode = 0
 text = "Route 3
 "
 script = ExtResource("1_6hwbm")
 key = "003"
+
+[node name="Route004" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "004"
+
+[node name="Route005" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "005"
+
+[node name="Route006" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "006"
+
+[node name="Route007" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "007"
+
+[node name="Route008" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "008"
+
+[node name="Route009" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "009"
+
+[node name="Route010" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "010"
+
+[node name="Route011" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "011"
+
+[node name="Route012" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "012"
+
+[node name="Route024" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "024"
+
+[node name="Route013" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "013"
+
+[node name="Route014" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "014"
+
+[node name="Route015" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "015"
+
+[node name="Route016" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "016"
+
+[node name="Route017" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "017"
+
+[node name="Route018" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "018"
+
+[node name="Route019" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "019"
+
+[node name="Route020" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "020"
+
+[node name="Route021" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "021"
+
+[node name="Route022" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "022"
+
+[node name="Route023" type="Button" parent="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+focus_mode = 0
+text = "Route 4
+"
+script = ExtResource("1_6hwbm")
+key = "023"
 
 [node name="PokemonListMargin" parent="VBoxContainer/Body/Main" instance=ExtResource("3_00lm4")]
 layout_mode = 1
@@ -143,6 +340,27 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/VBoxContainer/Route001" to="VBoxContainer/Body/Main/MarginContainer/VBoxContainer" method="_on_route_1_pressed"]
-[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/VBoxContainer/Route002" to="VBoxContainer/Body/Main/MarginContainer/VBoxContainer" method="_on_route_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/VBoxContainer/Route003" to="VBoxContainer/Body/Main/MarginContainer/VBoxContainer" method="_on_route_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route001" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer" method="_on_route_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route002" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer" method="_on_route_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route003" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer" method="_on_route_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route004" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route004" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route005" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route005" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route006" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route006" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route007" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route007" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route008" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route008" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route009" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route009" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route010" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route010" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route011" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route011" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route012" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route012" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route024" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route024" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route013" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route013" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route014" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route014" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route015" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route015" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route016" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route016" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route017" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route017" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route018" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route018" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route019" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route019" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route020" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route020" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route021" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route021" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route022" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route022" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route023" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route023" method="_on_pressed"]

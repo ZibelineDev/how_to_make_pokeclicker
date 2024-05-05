@@ -14,6 +14,12 @@ func _ready() -> void:
 		disabled = true
 		visible = false
 		ManagerRoutes.ref.route_unlocked.connect(_on_route_unlocked)
+	
+	update_text()
+
+
+func update_text() -> void:
+	text = (DBRoutes.dict[key] as DBRoute).name
 
 
 func unlock_route() -> void:
@@ -24,3 +30,11 @@ func unlock_route() -> void:
 func _on_route_unlocked(_key : String) -> void:
 	if key == _key:
 		unlock_route()
+
+
+func _on_button_pressed() -> void:
+	ManagerRoutes.ref.update_route(key)
+
+
+func _on_pressed() -> void:
+	ManagerRoutes.ref.update_route(key)

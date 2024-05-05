@@ -18,5 +18,5 @@ func _on_pokemon_defeated(_key : String) -> void:
 		increase_defeat_counter()
 	
 	if not is_unlocked:
-		if _key == "002":
+		if _key == "001":
 			progress_unlock()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ccxui30cwk2ah"]
+[gd_scene load_steps=15 format=3 uid="uid://ccxui30cwk2ah"]
 
 [ext_resource type="Texture2D" uid="uid://bq3jr2f7oit5w" path="res://assets/pokemons/mightyena.png" id="1_nj5wc"]
 [ext_resource type="Script" path="res://scenes/user_interface/views/main_view/master.gd" id="2_3kw1j"]
@@ -30,6 +30,52 @@ func _update_text() -> void:
 
 func _on_attack_update() -> void:
 	_update_text()
+"
+
+[sub_resource type="GDScript" id="GDScript_cf7lh"]
+resource_name = "defeat_counter"
+script/source = "extends Label
+
+
+func _ready() -> void:
+	update_text()
+	ManagerRoutes.ref.route_updated.connect(_on_route_updated)
+	ManagerRoutes.ref.pokemon_defeated.connect(_on_pokemon_defeated)
+
+
+func update_text() -> void:
+	var _text : String = \"Defeated : \"
+	_text += \"%s\" %(Game.ref.data.routes[Game.ref.data.current_route] as DataRoute).defeat_counter
+	text = _text
+
+
+func _on_pokemon_defeated(_key : String) -> void:
+	update_text()
+
+
+func _on_route_updated() -> void:
+	update_text()
+"
+
+[sub_resource type="GDScript" id="GDScript_6aury"]
+resource_name = "route_variety"
+script/source = "extends Label
+
+
+func _ready() -> void:
+	update_text()
+	ManagerRoutes.ref.route_updated.connect(_on_route_updated)
+
+
+func update_text() -> void:
+	var _text : String = \"Route Variety : \"
+	_text += \"%s\" %(DBRoutes.dict[Game.ref.data.current_route] as DBRoute).encounter_table.size()
+	
+	text = _text
+
+
+func _on_route_updated() -> void:
+	update_text()
 "
 
 [node name="MainView" type="VBoxContainer"]
@@ -117,12 +163,24 @@ offset_bottom = 40.0
 
 [node name="Attack" type="Label" parent="CentralPart/VBoxContainer"]
 layout_mode = 2
+tooltip_text = "This is an approximation of the average damage you have.
+
+Real damages will differ based on the move used."
+mouse_filter = 1
 text = "Attack : 1"
 script = SubResource("GDScript_80h4q")
 
-[node name="ClickAttack" type="Label" parent="CentralPart/VBoxContainer"]
+[node name="DefeatCounter" type="Label" parent="CentralPart/VBoxContainer"]
 layout_mode = 2
 text = "Click Attack : 1"
+script = SubResource("GDScript_cf7lh")
+
+[node name="RouteVariety" type="Label" parent="CentralPart/VBoxContainer"]
+layout_mode = 2
+tooltip_text = "The Variety represents how many different Pokémons are in this zone."
+mouse_filter = 1
+text = "Click Attack : 1"
+script = SubResource("GDScript_6aury")
 
 [node name="MarginContainer" type="MarginContainer" parent="CentralPart"]
 layout_mode = 1
@@ -138,6 +196,7 @@ theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
 [node name="ShouldCaptureButton" type="CheckButton" parent="CentralPart/MarginContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
