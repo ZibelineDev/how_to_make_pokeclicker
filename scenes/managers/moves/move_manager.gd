@@ -28,8 +28,8 @@ func _ready() -> void:
 
 ## Regenerate the full list of moves from the entire team.
 func regenerate_moves() -> void:
-	var old_moves : Array[String] = team_moves
-	team_moves = []
+	var old_moves : Array[String] = team_moves.duplicate()
+	team_moves.clear()
 	
 	for key : String in Game.ref.data.team:
 		for move : String in (DBPokemons.dict[key] as DBPokemon).moves:
@@ -95,6 +95,5 @@ func _on_team_updated() -> void:
 	regenerate_moves()
 
 
-func _on_move_used(key : String) -> void:
+func _on_move_used(_key : String) -> void:
 	clear_chosen_moves()
-	print("Move used : %s" %(DBAttacks.dict[key] as DBAttack).name)

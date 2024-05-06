@@ -1,9 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4gexgfjaygq6"]
+[gd_scene load_steps=26 format=3 uid="uid://c4gexgfjaygq6"]
 
 [ext_resource type="Script" path="res://scenes/managers/routes/routes_manager.gd" id="1_5mfx2"]
 [ext_resource type="Script" path="res://scripts/routes/route_001.gd" id="2_vyym4"]
 [ext_resource type="Script" path="res://scripts/routes/route_002.gd" id="3_yadw1"]
 [ext_resource type="Script" path="res://scripts/routes/route_003.gd" id="4_i2qvl"]
+[ext_resource type="Script" path="res://scripts/routes/route_004.gd" id="5_n8isr"]
+[ext_resource type="Script" path="res://scripts/routes/route_005.gd" id="6_wn1ah"]
+[ext_resource type="Script" path="res://scripts/routes/route_006.gd" id="7_m8jj3"]
+[ext_resource type="Script" path="res://scripts/routes/route_007.gd" id="8_da1dn"]
+[ext_resource type="Script" path="res://scripts/routes/route_008.gd" id="9_dy566"]
+[ext_resource type="Script" path="res://scripts/routes/route_009.gd" id="10_ssg3n"]
+[ext_resource type="Script" path="res://scripts/routes/route_010.gd" id="11_71ahl"]
+[ext_resource type="Script" path="res://scripts/routes/route_011.gd" id="12_l3rgr"]
+[ext_resource type="Script" path="res://scripts/routes/route_012.gd" id="13_kiy7c"]
+[ext_resource type="Script" path="res://scripts/routes/route_013.gd" id="14_viuq7"]
+[ext_resource type="Script" path="res://scripts/routes/route_014.gd" id="15_c777u"]
+[ext_resource type="Script" path="res://scripts/routes/route_015.gd" id="16_2j21g"]
+[ext_resource type="Script" path="res://scripts/routes/route_016.gd" id="17_7h6vb"]
+[ext_resource type="Script" path="res://scripts/routes/route_017.gd" id="18_tbxfg"]
+[ext_resource type="Script" path="res://scripts/routes/route_018.gd" id="19_ssbyy"]
+[ext_resource type="Script" path="res://scripts/routes/route_019.gd" id="20_d462r"]
+[ext_resource type="Script" path="res://scripts/routes/route_020.gd" id="21_aaito"]
+[ext_resource type="Script" path="res://scripts/routes/route_021.gd" id="22_7iao5"]
+[ext_resource type="Script" path="res://scripts/routes/route_022.gd" id="23_vtsnx"]
+[ext_resource type="Script" path="res://scripts/routes/route_023.gd" id="24_56ldp"]
+[ext_resource type="Script" path="res://scripts/routes/route_024.gd" id="25_djv7i"]
 
 [node name="RoutesManager" type="Node"]
 script = ExtResource("1_5mfx2")
@@ -16,3 +37,66 @@ script = ExtResource("3_yadw1")
 
 [node name="Route003" type="Node" parent="."]
 script = ExtResource("4_i2qvl")
+
+[node name="Route004" type="Node" parent="."]
+script = ExtResource("5_n8isr")
+
+[node name="Route005" type="Node" parent="."]
+script = ExtResource("6_wn1ah")
+
+[node name="Route006" type="Node" parent="."]
+script = ExtResource("7_m8jj3")
+
+[node name="Route007" type="Node" parent="."]
+script = ExtResource("8_da1dn")
+
+[node name="Route008" type="Node" parent="."]
+script = ExtResource("9_dy566")
+
+[node name="Route009" type="Node" parent="."]
+script = ExtResource("10_ssg3n")
+
+[node name="Route010" type="Node" parent="."]
+script = ExtResource("11_71ahl")
+
+[node name="Route011" type="Node" parent="."]
+script = ExtResource("12_l3rgr")
+
+[node name="Route012" type="Node" parent="."]
+script = ExtResource("13_kiy7c")
+
+[node name="Route013" type="Node" parent="."]
+script = ExtResource("14_viuq7")
+
+[node name="Route014" type="Node" parent="."]
+script = ExtResource("15_c777u")
+
+[node name="Route015" type="Node" parent="."]
+script = ExtResource("16_2j21g")
+
+[node name="Route016" type="Node" parent="."]
+script = ExtResource("17_7h6vb")
+
+[node name="Route017" type="Node" parent="."]
+script = ExtResource("18_tbxfg")
+
+[node name="Route018" type="Node" parent="."]
+script = ExtResource("19_ssbyy")
+
+[node name="Route019" type="Node" parent="."]
+script = ExtResource("20_d462r")
+
+[node name="Route020" type="Node" parent="."]
+script = ExtResource("21_aaito")
+
+[node name="Route021" type="Node" parent="."]
+script = ExtResource("22_7iao5")
+
+[node name="Route022" type="Node" parent="."]
+script = ExtResource("23_vtsnx")
+
+[node name="Route023" type="Node" parent="."]
+script = ExtResource("24_56ldp")
+
+[node name="Route024" type="Node" parent="."]
+script = ExtResource("25_djv7i")

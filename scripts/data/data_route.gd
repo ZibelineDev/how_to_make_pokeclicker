@@ -12,5 +12,5 @@ var is_unlocked : bool = false
 var unlock_progress : int = 0
 
 
-func _init(_key : String) -> void:
+func _init(_key : String = "-1") -> void:
 	key = _key

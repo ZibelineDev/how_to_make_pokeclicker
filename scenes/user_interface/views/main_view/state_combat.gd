@@ -59,7 +59,12 @@ func on_pokemon_defeated() -> void:
 	ManagerExperience.ref.add_experience(master.base_experience)
 	ManagerRoutes.ref.pokemon_defeated.emit(Game.ref.data.current_route)
 	
-	if master.should_capture:
+	var is_captured : bool = false
+	
+	if Game.ref.data.captured_pokemons.has(master.current_pokemon_id):
+		is_captured = true
+	
+	if not is_captured:
 		state_manager.change_state(state_manager.capture_state)
 	
 	else:

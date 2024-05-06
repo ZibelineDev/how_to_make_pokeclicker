@@ -13,7 +13,7 @@ config_version=5
 config/name="how_to_make_pokeclicker"
 run/main_scene="res://scenes/game/game.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://assets/pokeball.png"
 
 [debug]
 

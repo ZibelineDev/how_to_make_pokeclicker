@@ -32,15 +32,26 @@ var data : Data
 func _enter_tree() -> void:
 	_singleton_check()
 	data = Data.new()
+	SaveSystem.load_data()
 
 
 ## Ready method.
 func _ready() -> void:
 	_initalise_starter_pokemon()
 	_initialise_damages()
+	ManagerMoves.ref.regenerate_moves()
 	
 	var user_interface : Node = packed_user_interface.instantiate()
 	add_child(user_interface)
+	
+	var pokemons : Array[Variant] = DBPokemons.dict.keys()
+	print("Pokémons : %s" %pokemons.size())
+	
+	var moves : Array[Variant] = DBAttacks.dict.keys()
+	print("Moves : %s" %moves.size())
+	
+	var routes : Array[Variant] = DBRoutes.dict.keys()
+	print("Routes : %s" %routes.size())
 
 
 ## Initialise databases.
@@ -60,8 +71,11 @@ func _initialise_damages() -> void:
 
 
 func _initalise_starter_pokemon() -> void:
-	ManagerCapture.ref.capture_pokemon("0025:01")
-	##ManagerCapture.ref.capture_pokemon("0016:01")
-	##ManagerCapture.ref.capture_pokemon("0019:01")
-	TeamManager.ref.add_pokemon("0025:01")
-	ManagerExperience.ref.level_up_pokemon(5, "0025:01")
+	if not Game.ref.data.captured_pokemons.has("0025:01"):
+		ManagerCapture.ref.capture_pokemon("0025:01")
+		TeamManager.ref.add_pokemon("0025:01")
+		ManagerExperience.ref.level_up_pokemon(5, "0025:01")
+
+
+func _on_save_timer_timeout() -> void:
+	SaveSystem.save_data()

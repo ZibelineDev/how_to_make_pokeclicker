@@ -17,6 +17,10 @@ packed_user_interface = ExtResource("1_5fa6v")
 packed_db_pokemons = ExtResource("3_7k3be")
 packed_db_routes = ExtResource("4_wr1e5")
 
+[node name="SaveTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [node name="Managers" type="Node" parent="."]
 
 [node name="RoutesManager" parent="Managers" instance=ExtResource("5_m4dx7")]
@@ -36,3 +40,5 @@ packed_db_routes = ExtResource("4_wr1e5")
 [node name="DBRoutes" parent="Databases" instance=ExtResource("4_wr1e5")]
 
 [node name="DBPokemons" parent="Databases" instance=ExtResource("3_7k3be")]
+
+[connection signal="timeout" from="SaveTimer" to="." method="_on_save_timer_timeout"]
