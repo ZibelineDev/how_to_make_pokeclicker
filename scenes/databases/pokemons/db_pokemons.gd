@@ -863,7 +863,7 @@ func _ready() -> void:
 	dict["0198:01"] = DBPokemon.new(
 			"0198:01",
 			"Murkrow",
-			load("res://assets/pokemons/delibird.png") as Texture2D,
+			load("res://assets/pokemons/murkrow.png") as Texture2D,
 			[ManagerDamage.Types.DARK, ManagerDamage.Types.FLYING],
 			["048", "033"],#Dark Pulse & Drill Peck
 			68,
