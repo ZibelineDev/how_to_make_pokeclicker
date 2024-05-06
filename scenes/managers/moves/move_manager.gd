@@ -95,6 +95,5 @@ func _on_team_updated() -> void:
 	regenerate_moves()
 
 
-func _on_move_used(key : String) -> void:
+func _on_move_used(_key : String) -> void:
 	clear_chosen_moves()
-	print("Move used : %s" %(DBAttacks.dict[key] as DBAttack).name)

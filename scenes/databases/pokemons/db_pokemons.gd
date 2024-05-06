@@ -916,7 +916,7 @@ func _ready() -> void:
 			load("res://assets/pokemons/smeargle.png") as Texture2D,
 			[ManagerDamage.Types.NORMAL],
 			["021"],
-			210,
+			150,
 			90,
 	)
 	
