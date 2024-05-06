@@ -9,7 +9,7 @@ static var ref : Game
 ## Singleton check.
 func _singleton_check() -> void:
 	if ref:
-		free()
+		queue_free()
 		return
 	
 	ref = self
@@ -43,15 +43,6 @@ func _ready() -> void:
 	
 	var user_interface : Node = packed_user_interface.instantiate()
 	add_child(user_interface)
-	
-	var pokemons : Array[Variant] = DBPokemons.dict.keys()
-	print("Pokémons : %s" %pokemons.size())
-	
-	var moves : Array[Variant] = DBAttacks.dict.keys()
-	print("Moves : %s" %moves.size())
-	
-	var routes : Array[Variant] = DBRoutes.dict.keys()
-	print("Routes : %s" %routes.size())
 
 
 ## Initialise databases.

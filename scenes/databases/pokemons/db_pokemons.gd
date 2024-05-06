@@ -9,7 +9,7 @@ static var ref : DBPokemons
 ## Singleton check.
 func _enter_tree() -> void:
 	if ref:
-		free()
+		queue_free()
 		return
 	
 	ref = self
