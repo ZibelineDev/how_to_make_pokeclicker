@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bimcdx14nvruq"]
+[gd_scene load_steps=8 format=3 uid="uid://bimcdx14nvruq"]
 
 [ext_resource type="Script" path="res://scenes/user_interface/route_button.gd" id="1_6hwbm"]
 [ext_resource type="PackedScene" uid="uid://fhtvis1jpugg" path="res://scenes/user_interface/views/currency_view/currency_view.tscn" id="1_7e88w"]
+[ext_resource type="Script" path="res://scenes/user_interface/user_interface.gd" id="1_srupv"]
 [ext_resource type="PackedScene" uid="uid://ccxui30cwk2ah" path="res://scenes/user_interface/views/main_view/main_view.tscn" id="2_oq2uv"]
 [ext_resource type="PackedScene" uid="uid://ctbrxtnjvr7a" path="res://scenes/user_interface/views/pokemon_list_view/pokemon_list_view.tscn" id="3_00lm4"]
+[ext_resource type="PackedScene" uid="uid://c4yg47lewoocn" path="res://scenes/user_interface/views/menu/menu_panel.tscn" id="5_n68f4"]
 
 [sub_resource type="GDScript" id="GDScript_mv5is"]
 resource_name = "route_buttons"
@@ -22,15 +24,6 @@ func _on_route_3_pressed() -> void:
 	ManagerRoutes.ref.update_route(\"003\")
 "
 
-[sub_resource type="GDScript" id="GDScript_o6tfg"]
-resource_name = "front_view"
-script/source = "extends Control
-
-
-@export 
-var team_panel : Panel
-"
-
 [node name="UserInterface" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -38,6 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_srupv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -326,7 +320,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = SubResource("GDScript_o6tfg")
+
+[node name="MenuPanel" parent="VBoxContainer/Body/Front" instance=ExtResource("5_n68f4")]
+layout_mode = 1
+pivot_offset = Vector2(0, 820)
 
 [node name="Footer" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
@@ -339,6 +336,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Footer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="MenuButton" type="Button" parent="VBoxContainer/Footer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "                Menu                "
 
 [connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route001" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer" method="_on_route_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route002" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer" method="_on_route_2_pressed"]
@@ -364,3 +372,4 @@ grow_vertical = 2
 [connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route021" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route021" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route022" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route022" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route023" to="VBoxContainer/Body/Main/MarginContainer/ScrollContainer/VBoxContainer/Route023" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Footer/HBoxContainer/MarginContainer/MenuButton" to="." method="_on_menu_button_pressed"]

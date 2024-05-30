@@ -49,6 +49,7 @@ func reset() -> void:
 	master.hp = master.base_hp
 	master.progress_bar.max_value = master.hp
 	master.progress_bar.value = master.hp
+	master.effects.clear()
 	
 	(get_node("%RightHp") as Label).text = "%s" %master.hp
 	(get_node("%MiddleHp") as Label).text = "/"
