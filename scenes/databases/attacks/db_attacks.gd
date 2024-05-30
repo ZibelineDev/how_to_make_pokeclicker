@@ -34,7 +34,9 @@ static var dict : Dictionary = {
 		"005",
 		"Poison Sting",
 		ManagerDamage.Types.POISON,
-		1.1,
+		0.9,
+		DBAttack.effects.POISON,
+		100,
 	),
 	
 	"006" : DBAttack.new(
@@ -83,7 +85,9 @@ static var dict : Dictionary = {
 		"012",
 		"Jackpot",
 		ManagerDamage.Types.NORMAL,
-		1.3,
+		1.1,
+		DBAttack.effects.INCREASE_EXP,
+		100,
 	),
 	
 	"013" : DBAttack.new(

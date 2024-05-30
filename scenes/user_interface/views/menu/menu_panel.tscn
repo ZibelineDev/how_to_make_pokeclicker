@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4yg47lewoocn"]
+
+[ext_resource type="StyleBox" uid="uid://douj2t0c1x0a6" path="res://assets/panel_styles/opaque.tres" id="1_x7wjx"]
+[ext_resource type="Script" path="res://scenes/user_interface/views/menu/menu_panel.gd" id="2_n81iu"]
+
+[node name="MenuPanel" type="Panel"]
+custom_minimum_size = Vector2(320, 0)
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_x7wjx")
+script = ExtResource("2_n81iu")

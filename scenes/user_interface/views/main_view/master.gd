@@ -25,6 +25,8 @@ var current_pokemon_id : String
 var base_experience : int = -1
 ## Base hp of the pokémon of the route.
 var base_hp : int = -1
+## List of effects afflicting the Pokémon.
+var effects : Array[DBAttack.effects] = []
 
 
 
